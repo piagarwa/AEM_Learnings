@@ -1,0 +1,65 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${clientlib.all @ categories='sling.channel.package'}"/>
+     <div data-sly-use.channelPackageComponent="com.sling.tv.core.ChannelPackageComponent">
+			<input type="hidden" id="m25Channels" value="${channelPackageComponent.channelPackageBean.m25ChannelIds}">
+			<input type="hidden" id="m30Channels" value="${channelPackageComponent.channelPackageBean.m30ChannelIds}">
+			<input type="hidden" id="m60Channels" value="${channelPackageComponent.channelPackageBean.m60ChannelIds}">	
+			<input type="hidden" id="y25ChannelPrice" value="${channelPackageComponent.channelPackageBean.y25ChannelMoney}">
+            <input type="hidden" id="y30ChannelPrice" value="${channelPackageComponent.channelPackageBean.y30ChannelMoney}">	
+			<input type="hidden" id="y60ChannelPrice" value="${channelPackageComponent.channelPackageBean.y60ChannelMoney}">	
+            <input type="hidden" id="m25ChannelPrice" value="${channelPackageComponent.channelPackageBean.m25ChannelMoney}">
+            <input type="hidden" id="m30ChannelPrice" value="${channelPackageComponent.channelPackageBean.m30ChannelMoney}">	
+			<input type="hidden" id="m60ChannelPrice" value="${channelPackageComponent.channelPackageBean.m60ChannelMoney}">	
+                <sly data-sly-test="${channelPackageComponent.channelPackageBean.monthlyTitle}">
+                <div class="fadein slower">
+                     <div class="mss-packages dark-gradient">
+                        <div class="container-fluid">
+                           <div class="row mss-packages-header">
+                              <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                                 <div class="row ng-scope">
+                                    <a class="mss-packages-tab packages-tab-header float-left active-tab" id="monthAnchor">
+                                       <h6 class="text-uppercase h-tag-spacing ng-binding">${properties.monthlyTitle}</h6>
+                                       <p class="fine-print ng-binding">${properties.monthlySubTitle}</p>
+                                    </a>
+                                    <a class="mss-packages-tab packages-tab-header float-left" id="yearAnchor">
+                                       <h6 class="text-uppercase h-tag-spacing ng-binding">${properties.yearlyTitle}</h6>
+                                       <p class="fine-print ng-binding">${properties.yearlySubTitle}</p>
+                                    </a>
+                                 </div>
+                                 <div class="row">
+                                    <div class="mss-packages-tab float-left ng-scope active-tab" id="hindi-pack" style="width: 33.3333%;">
+                                       <h1 class="text-uppercase h-tag-spacing ng-binding">${properties.m25ChannelTitle}</h1>
+                                       <h6 class="text-uppercase h-tag-spacing channel-bottom-margin ng-binding">${properties.m25ChannelSubtitle}</h6>
+                                       <p class="fine-print extra-bold p-tag-spacing hidden-xs ng-binding"></p>
+                                       <p class="fine-print extra-bold p-tag-spacing visible-xs ng-binding"></p>
+                                       <hr class="mss-packages-hr">
+                                       <p class="fine-print extra-bold text-uppercase p-tag-spacing ng-binding" id="25Price">${properties.m25ChannelMoney}</p>
+                                    </div>
+                                    <div class="mss-packages-tab float-left ng-scope" id="hindi-premium" style="width: 33.3333%;">
+                                       <h1 class="text-uppercase h-tag-spacing ng-binding">${properties.m30ChannelTitle}</h1>
+                                       <h6 class="text-uppercase h-tag-spacing channel-bottom-margin ng-binding">${properties.m30ChannelSubtitle}</h6>
+                                       <p class="fine-print extra-bold p-tag-spacing hidden-xs ng-binding"></p>
+                                       <p class="fine-print extra-bold p-tag-spacing visible-xs ng-binding"></p>
+                                       <hr class="mss-packages-hr">
+                                       <p class="fine-print extra-bold text-uppercase p-tag-spacing ng-binding" id="30Price">${properties.m30ChannelMoney}</p>
+                                    </div>
+                                    <div class="mss-packages-tab float-left ng-scope" id="hindi-gold" style="width: 33.3333%;">
+                                       <h1 class="text-uppercase h-tag-spacing ng-binding">${properties.m60ChannelTitle}</h1>
+                                       <h6 class="text-uppercase h-tag-spacing channel-bottom-margin ng-binding">${properties.m60ChannelSubtitle}</h6>
+                                       <p class="fine-print extra-bold p-tag-spacing hidden-xs ng-binding"></p>
+                                       <p class="fine-print extra-bold p-tag-spacing visible-xs ng-binding"></p>
+                                       <hr class="mss-packages-hr">
+                                       <p class="fine-print extra-bold text-uppercase p-tag-spacing ng-binding" id="60Price">${properties.m60ChannelMoney}</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+             	<div data-sly-resource ="${'allchannels' @ resourceType='sling-tv/components/content/general/allchannels'}"></div>
+			</sly>
+			<sly data-sly-test="${!channelPackageComponent.channelPackageBean.monthlyTitle}">
+                Please configure the channel package component 
+			</sly>
+    </div>                        

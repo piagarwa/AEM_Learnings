@@ -1,0 +1,15 @@
+<!-- CTA(Call To Action) Text Configuration - Start -->
+<div data-sly-test="${wcmmode.edit && !properties.socialMediaLinks}">Click here to configure Social Media Links </div>
+<sly data-sly-use.socialMediaLinks="com.sling.tv.core.models.SocialMediaLinksModel">
+<ul class="list-inline social">
+    <sly data-sly-list.socialMediaLink="${socialMediaLinks.socialMediaList}">		   
+        <li><a x-cq-linkchecker="skip" class="social-icon" data-sly-use.socialMediaLinkChecker="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=socialMediaLink.link}" href="${socialMediaLinkChecker.formattedLink}" target="_blank"><span class="${socialMediaLink.icon}"></span></a></li>                          
+	</sly>
+</ul>
+</sly>
+
+
+
+
+
+                                        

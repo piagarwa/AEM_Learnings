@@ -1,0 +1,139 @@
+
+
+<input type="hidden" id="week" value="${properties.deskWeek}">
+<input type="hidden" id="today" value="${properties.deskTod}">
+<input type="hidden" id="sunday" value="${properties.deskSun}">
+<input type="hidden" id="monday" value="${properties.deskMon}">
+<input type="hidden" id="tuesday" value="${properties.deskTue}">
+<input type="hidden" id="wednesday" value="${properties.deskWed}">
+<input type="hidden" id="thursday" value="${properties.deskThu}">
+<input type="hidden" id="friday" value="${properties.deskFri}">
+<input type="hidden" id="saturday" value="${properties.deskSat}">
+<input type="hidden" id="january" value="${properties.deskJan}">
+<input type="hidden" id="february" value="${properties.deskFeb}">
+<input type="hidden" id="march" value="${properties.deskMar}">
+<input type="hidden" id="april" value="${properties.deskApr}">
+<input type="hidden" id="may" value="${properties.deskMay}">
+<input type="hidden" id="june" value="${properties.deskJun}">
+<input type="hidden" id="july" value="${properties.deskJul}">
+<input type="hidden" id="august" value="${properties.deskAug}">
+<input type="hidden" id="september" value="${properties.deskSep}">
+<input type="hidden" id="october" value="${properties.deskOct}">
+<input type="hidden" id="november" value="${properties.deskNov}">
+<input type="hidden" id="december" value="${properties.deskDec}">
+
+
+
+<input type="hidden" id="week-mob" value="${properties.mobWeek}">
+<input type="hidden" id="today-mob" value="${properties.mobTod}">
+<input type="hidden" id="sunday-mob" value="${properties.mobSun}">
+<input type="hidden" id="monday-mob" value="${properties.mobMon}">
+<input type="hidden" id="tuesday-mob" value="${properties.mobTue}">
+<input type="hidden" id="wednesday-mob" value="${properties.mobWed}">
+<input type="hidden" id="thursday-mob" value="${properties.mobThu}">
+<input type="hidden" id="friday-mob" value="${properties.mobFri}">
+<input type="hidden" id="saturday-mob" value="${properties.mobSat}">
+<input type="hidden" id="january-mob" value="${properties.mobJan}">
+<input type="hidden" id="february-mob" value="${properties.mobFeb}">
+<input type="hidden" id="march-mob" value="${properties.mobMar}">
+<input type="hidden" id="april-mob" value="${properties.mobApr}">
+<input type="hidden" id="may-mob" value="${properties.mobMay}">
+<input type="hidden" id="june-mob" value="${properties.mobJun}">
+<input type="hidden" id="july-mob" value="${properties.mobJul}">
+<input type="hidden" id="august-mob" value="${properties.mobAug}">
+<input type="hidden" id="september-mob" value="${properties.mobSep}">
+<input type="hidden" id="october-mob" value="${properties.mobOct}">
+<input type="hidden" id="november-mob" value="${properties.mobNov}">
+<input type="hidden" id="december-mob" value="${properties.mobDec}">
+
+
+
+<div data-sly-test="${wcmmode.edit && !properties.dateName }"> Click Here to Author all the Required Fields of the Component </div>
+
+<div class="container-fluid max-width">
+	<div id="gamefinder" class="gamefinder-component" data-sling-gamefinder-max-rows="${properties.maxRows}" data-sling-gamefinder-paged="${properties.showPagination}" data-sling-gamefinder-collapsed="${properties.showDesc}" data-sling-gamefinder-sticky="${properties.showSticky}">
+		<div class="gamefinder-container">
+			<div data-sly-resource="${ @path='gamefinder-header', resourceType='sling-tv/components/content/general/rich-text'}"></div>
+			<div id="gamefinder-search-container">
+				<div class="gamefinder-search-wrapper">
+					<input id="gamefinder-search" name="gamefinder-search" class="gamefinder-search" placeholder="${properties.searchText}"  value="${request.requestParameterMap['gamefinder-search'][0].toString}" />
+					<div class="fa fa-search gamefinder-search-icon"></div>
+				</div>
+				<div class="gamefinder-zip-wrapper">
+					<input type="number" id="gamefinder-zip" name="gamefinder-zip" class="gamefinder-zip" placeholder="${properties.zipText}" value="${request.requestParameterMap['gamefinder-zip'][0].toString}" />
+					<div class="fa fa-arrow-right gamefinder-search-icon"></div>
+				</div>
+			</div>
+			<div id="gamefinder-sport-container" class="gamefinder-sport-container">
+        <a class="gamefinder-sports-prev-btn gamefinder-sports-page-btn fa fa-chevron-left light"></a>
+        <a class="gamefinder-sports-next-btn gamefinder-sports-page-btn fa fa-chevron-right light"></a>
+        <div data-sly-use.gameFinder="com.sling.tv.core.models.GameFinderComponent" data-sly-unwrap>
+          <div data-sly-list.item="${gameFinder.gameTypes}" data-sly-unwrap>
+            <div data-sly-test="${item['showHide']}" class="gamefinder-sport-wrapper">
+             <div data-sly-test="${item['checked']}" data-sly-unwrap>
+                <input type="checkbox" id="gamefinder-sport-${item['keyName']}" checked value="${item['keyName']}" />
+                <label for="gamefinder-sport-${item['keyName']}">${item['sportName']}</label>
+              </div>
+              <div data-sly-test="${!item['checked']}" data-sly-unwrap>
+                <input type="checkbox" id="gamefinder-sport-${item['keyName']}" value="${item['keyName']}" />
+                <label for="gamefinder-sport-${item['keyName']}">${item['sportName']}</label>
+              </div>
+            </div>
+          </div>
+        </div>
+			</div>
+			<div id="gamefinder-results" class="gamefinder-results-container" >
+        <div class="gamefinder-results-false-header">
+          <div class="gamefinder-results-false-header-column-wrapper">
+            <div class="gamefinder-results-date-column gamefinder-results-false-header-column">${properties.dateName}<div class="fa fa-chevron-down gamefinder-date-button"></div></div>
+            <div class="gamefinder-results-time-column gamefinder-results-false-header-column">${properties.timeName}<small class="gamefinder-results-time-note">(ET)</small></div>
+            <div class="gamefinder-results-channel-column gamefinder-results-false-header-column">${properties.chName}</div>
+            <div class="gamefinder-results-matchup-column gamefinder-results-false-header-column">${properties.matchName}</div>
+          </div>
+          <div class="gamefinder-results-button-column gamefinder-results-false-header-column"></div>
+        </div>
+				<table>
+					<tr class="gamefinder-results-header">
+						<th class="gamefinder-results-date-column">${properties.dateName}<span class="fa fa-chevron-down gamefinder-date-button"></span></th>
+						<th class="gamefinder-results-time-column">${properties.timeName}<small class="gamefinder-results-time-note">(ET)</small></th>
+						<th class="gamefinder-results-channel-column">${properties.chName}</th>
+						<th class="gamefinder-results-matchup-column">${properties.matchName}</th>
+						<th class="gamefinder-results-button-column"></th>
+					</tr>
+					<tr class="gamefinder-results-spacer">
+						<td colspan="5">
+							<div class="gamefinder-date-pseudo-select">
+								<div class="gamefinder-date-selected gamefinder-date-all">
+									<div class="gamefinder-date-mobile">View This Week</div>
+									<div class="gamefinder-date-desktop">THIS<br/>WEEK</div>
+								</div>
+								<div>Mon, July 24</div>
+								<div>Tues, July 25</div>
+								<div>Wed, July 26</div>
+								<div>Th, July 27</div>
+								<div>Fri, July 28</div>
+								<div>Sat, July 29</div>
+								<div>Sun, July 30</div>
+							</div>
+							<div class="gamefinder-date-pseudo-select-overlay"></div>
+							<div class="gamefinder-blackout-disclaimer">
+								<div data-sly-resource="${ @path='gamefinder-moreinfo', resourceType='sling-tv/components/content/general/rich-text'}"></div>
+							</div>
+						</td>
+					</tr>
+				</table>
+				 <div class="gamefinder-results-error">
+						<div class="gamefinder-results-none">${properties.searchError}</div>
+						<div class="gamefinder-results-zip-error">${properties.zipError}</div>
+						<div class="gamefinder-results-no-affiliation">${properties.noGameError}</div>
+						<div class="gamefinder-results-server-error">${properties.serverError}</div>
+				</div>
+				<a class="gamefinder-results-prev-btn gamefinder-results-page-btn"><span class="fa fa-chevron-left light"></span> Previous</a>
+				<a class="gamefinder-results-next-btn gamefinder-results-page-btn">Next <span class="fa fa-chevron-right light"></span></a>
+				<div data-sly-test="${properties.showSeeAll}">
+					<a class="gamefinder-see-all" href="${properties.seeAllLink}" target="_blank">${properties.ctaName} <span class="fa fa-chevron-right light"></span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

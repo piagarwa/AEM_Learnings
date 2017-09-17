@@ -1,0 +1,17 @@
+<div data-sly-test="${wcmmode.edit}">
+  Configure the Carousel Component Here
+</div>
+
+<div class="prg-car">
+
+<section class="center slider">
+	<sly data-sly-use.listUse="com.sling.tv.core.models.CarouselModel">
+	<sly data-sly-list="${listUse.paths}">
+    <div>
+      <img src="${item}">
+    </div>
+</sly>
+</sly>
+</section>
+
+</div>

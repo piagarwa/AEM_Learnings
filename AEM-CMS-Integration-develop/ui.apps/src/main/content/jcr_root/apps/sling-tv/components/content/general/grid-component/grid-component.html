@@ -1,0 +1,72 @@
+<div data-sly-test="${wcmmode.edit}">
+    Edit the A La Carte grid
+    <br>
+
+ </div>
+
+        <div class="genre-ribbon" id="genre-ribbon" data-sly-use.grid="com.sling.tv.core.models.GridComponentModel" data-sly-attribute.data-sling-mobile-height="${properties.mobileHeight}" data-sly-attribute.data-sling-desktop-height="${properties.desktopHeight}">
+        <sly data-sly-test="${grid.channelList.children}">
+            <div class="channel-ribbons">
+                <div id="genre-window" class="not-expanded">
+
+                    <div id="genre-container">
+                        <ul class="genre-list slider-for outer__list list-inline" id="genre-labels" >
+                         <sly data-sly-list="${ grid.channelList.children }">
+                            <li>
+                                <div class="genre-titles">
+                                    <h5 class="list-header text-center">${item.title}</h5>
+                                </div>
+                            </li>
+                         </sly>
+                        </ul>
+                        <div class="channel-background">
+                            <ul class="genre-list list-inline one-time" id="genre-images">
+	                            <sly data-sly-list="${ grid.channelList.children }">
+	                                <li>
+	                                    <sly data-sly-list="${ item.children }">
+		                                    <sly data-sly-test="${ itemList.first }">
+			                                    <div class="list-item">
+			                                        <div class="genre-background"><img class="list-img" id="${item.title}" src="${item.imageFile}" alt="${item.alt}"></div>
+			                                    </div>
+				                            </sly>
+				                            <sly data-sly-test="${ !itemList.first }">
+			                                    <div class="list-item">
+			                                        <div class="genre-background"><img class="list-img" id="${item.title}" src="${item.imageFile}" alt="${item.alt}"></div>
+			                                        <ul id="color-list">
+			                                        	<span style="color:black;">.</span>
+				                                        <sly data-sly-test="${item.slingOrange}"><li class="fa fa-minus orange"></li></sly>
+				                                        <sly data-sly-test="${item.slingBlue}"><li class="fa fa-minus blue"></li></sly>
+				                                        <sly data-sly-test="${item.slingGreen}"><li class="fa fa-minus green"></li></sly>
+				                                    </ul>
+			                                    </div>
+		                                    </sly>
+	                                    </sly>
+	                                </li>
+	                            </sly>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="expand-buttons">
+                    <ul class="genre-list list-inline text-center">
+                       <li>
+                           <div class="text-center pointer js-morelink"><i class="fa fa-plus"></i><span class="bold js-moreTxt">${'MORE' @ i18n}</span><span class="bold js-lessTxt hide">${'LESS' @ i18n}</span><a href="#top"><span></span></a></div>
+                       </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="channel-packages">
+                <sly data-sly-test="${grid.slingOrange}">
+					<div class="channel-package"><span><i class="fa fa-minus orange"></i></span><span class="package-services-text">${grid.slingOrange}</span></div>
+				</sly>
+				<sly data-sly-test="${grid.slingBlue}">
+					<div class="channel-package"><span><i class="fa fa-minus blue"></i></span><span class="package-services-text">${grid.slingBlue}</span></div>
+				</sly>
+				<sly data-sly-test="${grid.slingGreen}">
+					<div class="channel-package"><span><i class="fa fa-minus green"></i></span><span class="package-services-text">${grid.slingGreen}</span></div>
+				</sly>
+            </div>
+          </sly>
+        </div>
+
+        <!-- Genre Ribbon Ends Here: -->

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+		jcr:primaryType="nt:unstructured"
+		jcr:title="A la Carte Hero"
+		sling:resourceType="cq/gui/components/authoring/dialog">
+	<content
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/foundation/container">
+		<layout
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
+		<items jcr:primaryType="nt:unstructured">
+			<tab1
+					jcr:primaryType="nt:unstructured"
+					jcr:title="A la Carte Hero"
+					sling:resourceType="granite/ui/components/foundation/section">
+				<layout
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+				<items jcr:primaryType="nt:unstructured">
+					<columns
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/foundation/container">
+						<items jcr:primaryType="nt:unstructured">
+							<hero-carousel
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container">
+								<layout
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+								<items jcr:primaryType="nt:unstructured">								    
+									<hero-type
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/select"
+											class="cq-dialog-dropdown-showhide"
+											cq-dialog-dropdown-showhide-target=".image-video-hide-show"
+											fieldLabel="Hero Type"
+											name="./heroType">
+										<items jcr:primaryType="nt:unstructured">
+											<image
+													jcr:primaryType="nt:unstructured"
+													text="Hero Image"
+													value="image"/>
+											<video
+													jcr:primaryType="nt:unstructured"
+													text="Hero Video"
+													value="video"/>
+										</items>
+									</hero-type>
+									<textComponent
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+											text="Include Text Component"
+											name="./includeTextComponent"
+											checked="false"
+											uncheckedValue="false"
+											value="true"/>
+									<ctaComponent
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+											text="Include CTA Component"
+											name="./includeCtaComponent"
+											checked="false"
+											uncheckedValue="false"
+											value="true"/>
+									<packageText
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"								
+											fieldLabel="Package Text"
+											name="./packageText" />
+									<priceDisplay
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"								
+											fieldLabel="Price Display"
+											name="./priceDisplay" />
+									<currency
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"								
+											fieldLabel="Currency"
+											name="./currency"
+											defaultValue="$"
+											fieldDescription="If no currency is provided , it will take $ as default Value" />
+									<offerDuration
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/coral/foundation/form/textfield"								
+											fieldLabel="Offer Duration"
+											name="./offerDuration"
+											defaultValue="/mo" 
+											fieldDescription="If no offer duration is provided , it will take /mo as default Value" />									
+								</items>
+							</hero-carousel>
+							<hero-image
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="hide image-video-hide-show"
+									showhidetargetvalue="image">
+								<items jcr:primaryType="nt:unstructured">                                    
+									<well
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container">
+										<layout
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+										<items jcr:primaryType="nt:unstructured">
+											<imagePath
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+													fieldLabel="Image URL"
+													name="./imageURL"
+													rootPath="/content/dam"/>
+											<imageAltText
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textfield"							
+													fieldLabel="Hero Image Alt Label"
+													name="./heroImageAltText"/>
+
+										</items>
+									</well>
+								</items>
+							</hero-image>
+							<hero-video
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="hide image-video-hide-show"
+									showhidetargetvalue="video">
+								<items jcr:primaryType="nt:unstructured">                                    
+									<well
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container">
+										<layout
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+										<items jcr:primaryType="nt:unstructured">
+											<videoURL
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+													fieldLabel="Video URL"
+													name="./videoURL"
+													rootPath="/content/dam"
+													showhidetargetvalue="video"/>
+											<fallBackImagePath
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+													fieldLabel="Fall Back Image URL"
+													name="./fallBackImagePath"
+													rootPath="/content/dam"
+													showhidetargetvalue="video"/>
+											<autoPlayVideo
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+													text="Auto Play Video"
+													name="./autoPlayVideo"
+													checked="true"
+													uncheckedValue="false"
+													value="true"/>
+										</items>
+									</well>
+								</items>
+							</hero-video>
+						</items>	
+					</columns>
+				</items>
+			</tab1>
+		</items>
+	</content>
+</jcr:root>

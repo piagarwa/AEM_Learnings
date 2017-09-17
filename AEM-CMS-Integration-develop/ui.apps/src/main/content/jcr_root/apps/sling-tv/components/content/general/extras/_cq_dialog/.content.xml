@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Tab 1"
+                sling:resourceType="granite/ui/components/foundation/container">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <hero-carousel
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Packages"
+                                sling:resourceType="granite/ui/components/foundation/container"
+                                fieldLabel="Head Lines">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <headline
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                        fieldDescription="Enter the Title for the Extras Component"
+                                        fieldLabel="Title"
+                                        name="./heading"/>
+                                    <subheading
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                        fieldDescription="Enter the Description for the Extras Component"
+                                        fieldLabel="Description"
+                                        name="./subHeading"/>
+                                    <extracategory
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/form/select"
+                                        class="cq-dialog-dropdown-showhide"
+                                        cq-dialog-dropdown-showhide-target=".image-video-hide-show"
+                                        fieldLabel="Category Type"
+                                        name="./extrasId">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <category1
+                                                jcr:primaryType="nt:unstructured"
+                                                text="extras_billtype1_package_1"
+                                                value="m25"/>
+                                            <category2
+                                                jcr:primaryType="nt:unstructured"
+                                                text="extras_billtype1_package_2"
+                                                value="m30"/>
+                                            <category3
+                                                jcr:primaryType="nt:unstructured"
+                                                text="extras_billtype1_package_3"
+                                                value="m60"/>
+                                            <category4
+                                                jcr:primaryType="nt:unstructured"
+                                                text="extras_billtype2_package_1"
+                                                value="s25"/>
+                                            <category5
+                                                jcr:primaryType="nt:unstructured"
+                                                text="extras_billtype2_package_2"
+                                                value="s30"/>
+                                            <category6
+                                                jcr:primaryType="nt:unstructured"
+                                                text="extras_billtype2_package_3"
+                                                value="s60"/>
+                                            <category7
+                                                jcr:primaryType="nt:unstructured"
+                                                text="extras_billtype3_package_1"
+                                                value="y25"/>
+                                            <category8
+                                                jcr:primaryType="nt:unstructured"
+                                                text="extras_billtype3_package_2"
+                                                value="y30"/>
+                                            <category9
+                                                jcr:primaryType="nt:unstructured"
+                                                text="extras_billtype3_package_3"
+                                                value="y60"/>
+                                        </items>
+                                    </extracategory>
+                                </items>
+                            </hero-carousel>
+                            <extrapackages
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Packages"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                fieldLabel="Packages">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    eaem-nested=""
+                                    name="./extraSlides">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <channelname
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="Enter the Package title"
+                                                    fieldLabel="Package Title"
+                                                    name="./extraPackages"/>
+                                                <channels1
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                    fieldLabel="Sub-Packeges">
+                                                    <field
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                        name="./subPackages">
+                                                        <layout
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                                        <items jcr:primaryType="nt:unstructured">
+                                                            <column
+                                                                jcr:primaryType="nt:unstructured"
+                                                                sling:resourceType="granite/ui/components/foundation/container">
+                                                                <items jcr:primaryType="nt:unstructured">
+                                                                    <monthlysubtitle
+                                                                        jcr:primaryType="nt:unstructured"
+                                                                        sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                        fieldDescription="Enter the Subtitle for Tab 1"
+                                                                        fieldLabel="Sub-Package Name"
+                                                                        name="./subHeading"/>
+                                                                </items>
+                                                            </column>
+                                                        </items>
+                                                    </field>
+                                                </channels1>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </extrapackages>
+                        </items>
+                    </columns>
+                </items>
+            </tab1>
+        </items>
+    </content>
+</jcr:root>

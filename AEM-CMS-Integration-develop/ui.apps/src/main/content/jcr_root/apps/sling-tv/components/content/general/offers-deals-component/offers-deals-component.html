@@ -1,0 +1,34 @@
+<div data-sly-test="${wcmmode.edit}">Configure Offers and Deals</div>
+<div class="deals-box" data-sly-use.offerDeals="com.sling.tv.core.models.OffersDealsModel">
+	<div class="container-fluid">
+		<div class="row">
+            <div data-sly-resource="${ @path='offers-headline', resourceType='sling-tv/components/content/general/rich-text'}"></div>
+			<div class="${offerDeals.offerDealsList.size == 2 && 'centered'} ">
+			<sly data-sly-list="${offerDeals.offerDealsList}">	
+                <div class="col-md-4 col-sm-6 col-xs-12 deals-item">
+                    <div class="thumbnail deals-offer">      
+						<div class="offer-ribbon">
+							<sly data-sly-test="${item.offerFlag}">
+								<img src="${item.offerFlagImage}" alt="${item.offerFlagImageAlt}"><span>${item.offerFlag}</span>
+							</sly>
+						</div>                       
+						<div class="caption">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6 col-xs-12">									
+                                    <div class="offer-logo"><img src="${item.deviceTitleImage}" alt="${item.deviceTitleImageAlt}"></div>
+                                    <div data-sly-resource="${  'offer-deals{0}' @ format=itemList.count, resourceType='sling-tv/components/content/general/rich-text'}" ></div>        
+                                </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <img src="${item.deviceImage}" alt="${item.deviceImageAlt}" class="thumb-image">
+                                </div>
+                            </div>                                    
+                            <div data-sly-resource="${ 'device-deals{0}' @ format=itemList.count, resourceType='sling-tv/components/content/general/rich-text'}" ></div>
+						</div>
+                    </div>
+					<div data-sly-resource="${ 'cta{0}' @ format=itemList.count, resourceType='sling-tv/components/content/general/cta-component'}" d></div>
+                </div>
+            </sly>
+			</div>
+        </div>
+    </div>
+</div>

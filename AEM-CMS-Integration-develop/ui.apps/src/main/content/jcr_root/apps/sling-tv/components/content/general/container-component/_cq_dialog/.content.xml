@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+		jcr:primaryType="nt:unstructured"
+		jcr:title="Container Component"
+		sling:resourceType="cq/gui/components/authoring/dialog">
+	<content
+			jcr:primaryType="nt:unstructured"
+			sling:resourceType="granite/ui/components/foundation/container">
+		<layout
+				jcr:primaryType="nt:unstructured"
+				sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
+		<items jcr:primaryType="nt:unstructured">
+			<tab1
+					jcr:primaryType="nt:unstructured"
+					jcr:title="Container with background colour and padding"
+					sling:resourceType="granite/ui/components/foundation/section">
+				<layout
+						jcr:primaryType="nt:unstructured"
+						sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+				<items jcr:primaryType="nt:unstructured">
+					<columns
+							jcr:primaryType="nt:unstructured"
+							sling:resourceType="granite/ui/components/foundation/container">
+						<items jcr:primaryType="nt:unstructured">
+							<container-component
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container">
+								<layout
+										jcr:primaryType="nt:unstructured"
+										sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+								<items jcr:primaryType="nt:unstructured">
+									<theme-type
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/select"
+											class="cq-dialog-dropdown-showhide"
+											cq-dialog-dropdown-showhide-target=".container-gradient-hide-show"
+											fieldLabel="Theme Type"
+											name="./themeType">
+										<items jcr:primaryType="nt:unstructured">
+											<container-theme
+													jcr:primaryType="nt:unstructured"
+													text="Container Theme"
+													value="container"/>
+											<gradient-theme
+													jcr:primaryType="nt:unstructured"
+													text="Gradient Theme"
+													value="gradient"/>
+										</items>
+									</theme-type>									
+									<fullWidthOptions
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/form/select"
+											fieldLabel="Full Width Options"
+											name="./fullWidthOptions"
+											defaultValue="container-fluid">
+										<items jcr:primaryType="nt:unstructured">
+											<fullWidthLayout
+													jcr:primaryType="nt:unstructured"
+													text="Full Width Layout"
+													value="container-fluid"/>											
+											<fullWidthwithMaxWidth
+													jcr:primaryType="nt:unstructured"
+													text="Full Width With Max Width 1920px"
+													value="container-fluid max-width"/>
+										</items>
+									</fullWidthOptions>
+								</items>
+							</container-component>
+							<container-theme
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="hide container-gradient-hide-show"
+									showhidetargetvalue="container">
+								<items jcr:primaryType="nt:unstructured">
+									<well
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container">
+										<layout
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+										<items jcr:primaryType="nt:unstructured">
+											<containerTheme
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/select"
+													fieldLabel="Container Theme"
+													name="./containerTheme"
+													defaultValue="dark-theme">
+												<items jcr:primaryType="nt:unstructured">
+													<light-theme
+															jcr:primaryType="nt:unstructured"
+															text="Light theme"
+															value="light-theme"/>											
+													<dark-theme
+															jcr:primaryType="nt:unstructured"
+															text="Dark Theme"
+															value="dark-theme"/>
+												</items>
+											</containerTheme>
+
+										</items>
+									</well>
+								</items>
+							</container-theme>
+							<gradientTheme
+									jcr:primaryType="nt:unstructured"
+									sling:resourceType="granite/ui/components/foundation/container"
+									class="hide container-gradient-hide-show"
+									showhidetargetvalue="gradient">
+								<items jcr:primaryType="nt:unstructured">                                    
+									<well
+											jcr:primaryType="nt:unstructured"
+											sling:resourceType="granite/ui/components/foundation/container">
+										<layout
+												jcr:primaryType="nt:unstructured"
+												sling:resourceType="granite/ui/components/foundation/layouts/well"/>
+										<items jcr:primaryType="nt:unstructured">
+											<lightColorCode
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textfield"
+													fieldLabel="Light Gradient Color Code"
+													fieldDescription="Please enter the Hex Color Code i.e. #FFFFFF"
+													name="./lightColorCode"
+													rootPath="/content/dam"/>
+											<darkColorCode
+													jcr:primaryType="nt:unstructured"
+													sling:resourceType="granite/ui/components/foundation/form/textfield"	
+													fieldDescription="Please enter the Hex Color Code i.e. #FFFFFF"
+													fieldLabel="Dark Gradient Color Code"
+													name="./darkColorCode"/>
+
+										</items>
+									</well>
+								</items>
+							</gradientTheme>
+						</items>	
+					</columns>
+				</items>
+			</tab1>
+		</items>
+	</content>
+</jcr:root>

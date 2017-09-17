@@ -1,0 +1,19 @@
+<sly data-sly-test="${wcmmode.edit && !properties.fullWidthOptions}"><p>click here to configure Container with background colour and padding</p></sly>
+<sly data-sly-test="${properties.themeType=='container'}">
+	<div class="device-banner-gradient ${properties.containerTheme} ${properties.fullWidthOptions}">
+		<div class="center-block">
+				<sly data-sly-resource="${ @path='par', resourceType='wcm/foundation/components/parsys'}"></sly>			
+		</div>
+	</div>
+</sly>
+<sly data-sly-test="${properties.themeType=='gradient'}">
+	<div class="device-banner-gradient ${properties.fullWidthOptions}" style="background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(${properties.lightColorCode @ context='styleToken'}),to(${properties.darkColorCode @ context='styleToken'}));background: -webkit-linear-gradient(top, ${properties.lightColorCode @ context='styleToken'} , ${properties.darkColorCode @ context='styleToken'} );background: -moz-linear-gradient(top, ${properties.lightColorCode @ context='styleToken'} , ${properties.darkColorCode @ context='styleToken'} );background: -ms-linear-gradient(top, ${properties.lightColorCode @ context='styleToken'} , ${properties.darkColorCode @ context='styleToken'} );background: -o-linear-gradient(top, ${properties.lightColorCode @ context='styleToken'} , ${properties.darkColorCode @ context='styleToken'} ); padding:0;">
+	
+		<div class="center-block">
+				<sly data-sly-resource="${ @path='par', resourceType='wcm/foundation/components/parsys'}"></sly>
+		</div>
+	</div>
+</sly>
+    
+    
+

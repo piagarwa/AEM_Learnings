@@ -1,0 +1,18 @@
+
+<!-- Device Ribbon code Starts Here: -->
+        <div class="row" data-sly-use.imageGrid="com.sling.tv.core.models.MultiFieldModel">
+        
+		 
+            <div class="col-md-12">
+                <div class="d-ribbon light">
+                	<sly data-sly-list.imageList="${imageGrid.multiFieldBeans}">
+                    	<img class="d-ribbon-wide-logos" src="${imageList.link}" alt="${imageList.alt}">
+                    </sly>
+                </div>
+            </div>
+        </div>
+        <!-- Device Ribbon code Ends Here: -->
+
+<div data-sly-test="${wcmmode.edit}">
+  Edit the Device Ribbon
+</div>

@@ -1,0 +1,94 @@
+<sly data-sly-use.navigationComponent="com.sling.tv.core.models.NavigationComponentModel">
+  <header class="${properties.hideHeaderNav && 'homepage-header'}">
+    <div data-sly-test="${wcmmode.edit && !properties.headerText}">Click here to configure Header Component</div>
+    <div class="navbar navbar-fixed-top text-uppercase" role="navigation" >
+        <div class="container-fluid" >
+            <div class="navbar-left" data-sly-use.absUrl="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=properties.logoLink}">
+                <a x-cq-linkchecker="skip" class="navbar-logo" href="${absUrl.formattedLink}">
+                    <img src="${properties.logoImage}" alt="${properties.logoAltText}">
+                </a>
+  
+				<button type="button" class="navbar-toggle large" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="fa fa-bars"></span>
+				</button>
+				<li class="visible-xs brand-logo not-active">
+					<a x-cq-linkchecker="skip" href="${absUrl.formattedLink}" class="hide"><img src="${properties.logoImage}" alt="${properties.logoAltText}"></a>
+				</li>
+				<p class="navbar-text extra-bold">${properties.headerText}</p>
+			</div>
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">            
+                <ul class="nav navbar-nav navbar-right">
+				    <sly data-sly-repeat="${ navigationComponent.header.children }">
+                        <li class="navbar-text visible-xs">
+						
+						<sly data-sly-test="${! item.children }">						   
+					     	<a x-cq-linkchecker="skip" class="navbar-link" title="${item.title}" data-sly-use.navBarLink="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=item.link}" href="${navBarLink.formattedLink}" target="${item.windowSelection}">${item.title}</a>
+						</sly>
+						<sly data-sly-test="${item.children }">						   
+							<a x-cq-linkchecker="skip" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+							${item.title} 
+							<span class="fa fa-chevron-down"></span>
+							</a>
+                            <ul class="dropdown-menu">							    
+								    <sly data-sly-repeat="${item.children}">
+                                        <li><a x-cq-linkchecker="skip" data-sly-use.navSubBarLink="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=item.link}" href="${navSubBarLink.formattedLink}" target="${item.windowSelection}">${item.title}</a></li>
+									</sly>                                
+                            </ul>
+						</sly>
+						</li>
+					</sly>
+                    <li class="visible-xs user-login navbar-text">
+                        <a></a>
+                    </li>
+                    <li class="hidden-xs brand-logo not-active"></li>
+					<sly data-sly-test="${!properties.hideLanguageSel}" data-sly-use.languageComponent="com.sling.tv.core.models.LanguageComponentModel">
+					    <sly data-sly-test="${languageComponent.languageList}">
+                        <li class="navbar-text dropdown language-toggle">
+                        <button aria-expanded="false" aria-haspopup="true" class="btn dropdown-toggle" data-toggle="dropdown" id="language-dropdown" type="button"><span>${properties.languageTitle}</span><span class="fa fa-chevron-down"></span></button>
+                        <div aria-labelledby="language-dropdown" class="dropdown-menu">
+                            <ul>
+							    <sly data-sly-list.language="${languageComponent.languageList}">		   
+									<li><a x-cq-linkchecker="skip" data-sly-use.languageLink="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=language.langLink}" href="${languageLink.formattedLink}">${language.langTitle}</a></li>                                        
+								</sly>
+                            </ul>
+                        </div>
+            
+						</li>
+						</sly>
+
+					</sly>
+                    <li class="user-login signIn"><a x-cq-linkchecker="skip" class="light" data-sly-use.signIn="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=properties.signInLink}" href="${signIn.formattedLink}" id="signin-link"> ${properties.memberText}  <span class="semi-bold "> ${properties.signInText} </span> </a></li>
+					
+					<li class="my-account-btn"><a x-cq-linkchecker="skip" data-sly-use.myAccount="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=properties.myAccountLink}" href="${myAccount.formattedLink}" id="my-account-btn"><span class="fa fa-user"></span> </a></li>
+                            
+                    <li class="signOut"><a x-cq-linkchecker="skip" data-sly-use.signOut="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=properties.signOutLink}" href="${signOut.formattedLink}" id="signout-link">${properties.signOutText}</a></li>
+                </ul>
+            </div>
+        </div>  
+	</div>   
+
+  </header>
+  <div class="device-template-container ${properties.hideHeaderNav && 'hidden-lg'} ${properties.hideHeaderNav && 'hidden-md'} ${properties.hideHeaderNav && 'hidden-sm'}">
+    <div class="sling-sub-nav hidden-xs">
+        <div class="container-fluid max-width">
+            <div class="row">
+			    <sly data-sly-repeat="${ navigationComponent.header.children }">
+			     	<sly data-sly-test="${! item.children }">
+                        <div class="col-xs-3 text-uppercase text-center"><a x-cq-linkchecker="skip" class="sub-nav-link" data-sly-use.headerNav="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=item.link}" href="${headerNav.formattedLink}" target="${item.windowSelection}">${item.title}</a></div>
+					</sly>
+					<sly data-sly-test="${ item.children }">						   
+					    <div class="col-xs-3 text-uppercase text-center dropdown">
+							<a x-cq-linkchecker="skip" class="sub-nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" >${item.title}</a>
+							<ul class="dropdown-menu">
+								<sly data-sly-repeat="${item.children}">
+									<li><a x-cq-linkchecker="skip" data-sly-use.headerSubNav="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=item.link}" href="${headerSubNav.formattedLink}" target="${item.windowSelection}">${item.title}</a></li>
+								</sly>                                
+							</ul>
+					    </div>
+				    </sly>						   
+				</sly>
+            </div>
+        </div>
+    </div>
+   </div>
+</sly>            

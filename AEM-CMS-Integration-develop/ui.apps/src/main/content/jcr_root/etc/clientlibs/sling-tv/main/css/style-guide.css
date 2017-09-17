@@ -1,0 +1,182 @@
+/* ===== Color CSS Starts Here ====== */
+
+.butter {
+    color: #fcbf38;
+}
+
+.fire {
+    color: #faa31e;
+}
+
+.water {
+    color: #14abe0;
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+.charcoal {
+    color: #353535;
+}
+
+.ash {
+    color: #252525;
+}
+
+.coal {
+    color: #1f1f1f;
+}
+
+.slate {
+    color: #4a4a4a;
+}
+
+.gravel {
+    color: #cfcfcf;
+}
+
+.apple-green {
+    color: #7ed321;
+}
+
+.danger-red {
+    color: #ff2100;
+}
+
+.style-guide-headline {
+    color: #fcbf38
+}
+
+.style-guide-subheadline {
+    color: #cfcfcf;
+    margin: 20px 0 10px 0
+}
+
+.style-guide-layout-bg {
+    color: #353535;
+    height: auto;
+    margin-top: 10px;
+    padding-bottom: 50px
+}
+
+.style-guide-columns {
+    margin: 10px 0
+}
+
+.style-guide-columns:nth-child(odd) {
+    color: #fcbf38;
+    outline: 1px solid #fcbf38;
+    height: 100px
+}
+
+.style-guide-columns:nth-child(even) {
+    color: #14abe0;
+    outline: 1px solid #14abe0;
+    height: 100px
+}
+
+.overflow-hidden {
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.style-guide-border {
+    border: #353535 1px solid
+}
+
+/* ===== Color CSS Starts Here ====== */
+
+/* ===== Font Size CSS Starts Here ====== */
+
+
+.gray {
+   color: #cfcfcf ;
+}
+
+.giant {
+        font-size: 8.2vw;
+        line-height: 8.2vw;
+    }
+.giant-1 {
+    font-size: 7.3vw;
+    line-height: 7.3vw;
+}
+.giant-2 {
+    font-size: 6.5vw;
+    line-height: 6.5vw;
+}
+.giant-3 {
+    font-size: 5.8vw;
+    line-height: 5.8vw;
+}
+.jumbo {
+    font-size: 5.2vw;
+    line-height: 5.2vw;
+}
+.jumbo-1 {
+    font-size: 4.6vw;
+    line-height: 4.6vw;
+}
+.jumbo-2 {
+    font-size: 4.1vw;
+    line-height: 4.1vw;
+}
+.large,
+.jumbotron .exclusive-device,
+.signup-step .step-name {
+    font-size: 3.6vw;
+    line-height: 3.6vw;
+}
+.large-1 {
+    font-size: 3.2vw;
+    line-height: 3.2vw;
+}
+.large-2 {
+    font-size: 2.9vw;
+    line-height: 2.9vw;
+}
+
+/* ===== Font Size CSS Starts Here ====== */
+
+/* ===== Font Weight CSS Starts Here ====== */
+
+.extra-bold {
+    font-weight: 800 !important
+}
+.bold {
+    font-weight: 700 !important
+}
+.semi-bold {
+    font-weight: 600 !important
+}
+.normal-weight {
+    font-weight: normal !important
+}
+.light {
+    font-weight: 300 !important
+}
+
+/* ===== Font Weight CSS Ends Here ====== */
+
+.fine-print {
+    font-size: 0.833em;
+}
+
+.strike-through {
+   text-decoration: line-through;
+}
+
+.offset-center {
+    margin-left: 25%;
+}
+
+@media (max-width: 767px) {
+    .offset-center {
+       margin-left: 16.6666666667%;
+   }
+}

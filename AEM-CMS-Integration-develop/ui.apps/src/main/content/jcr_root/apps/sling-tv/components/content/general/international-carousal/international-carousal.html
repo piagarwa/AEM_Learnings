@@ -1,0 +1,114 @@
+<sly data-sly-test="${wcmmode.edit}">click here to configure/edit International Carousal </sly>
+
+	<div class="minimal-cms container-fluid">
+		<div data-sly-use.internationalCarouselComponent="com.sling.tv.core.models.InternationalCarouselComponent">
+			<input type="hidden" id="count" value="${internationalCarouselComponent.imagesCount.size}">
+            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <div data-sly-list="${internationalCarouselComponent.imagesCount}" data-sly-unwrap>
+                    	<div data-sly-test="${item == 0}" data-sly-unwrap>
+                    		<li data-target="#carousel-example-generic" data-slide-to="${item}" class="active"></li>
+                		</div>
+                		<div data-sly-test="${item != 0}" data-sly-unwrap>
+                    		<li data-target="#carousel-example-generic" data-slide-to="${item}"></li>
+                		</div>
+                	</div>
+                </ol>
+                <div class="carousel-inner">
+                	<div data-sly-list.carouselImagesItem="${internationalCarouselComponent.carouselImages}" data-sly-unwrap>
+					 <div data-sly-test="${carouselImagesItem['path']}" data-sly-unwrap>
+                	     <a href="">
+                            <div data-sly-test="${carouselImagesItem['first'] == 'true'}" data-sly-unwrap>
+								<div class="item text-center active" id="${carouselImagesItem['id']}" data-imagurl="${carouselImagesItem['path']}" >
+                        			<div class="content theme-two"></div>
+                        			<a href= ""><img src="${carouselImagesItem['carousalImage']}" alt="${carouselImagesItem['altText']}"></a>
+                    			</div>
+                	    	</div>
+                			<div data-sly-test="${carouselImagesItem['first'] != 'true'}" data-sly-unwrap>
+								<div class="item text-center" id="${carouselImagesItem['id']}" data-imagurl="${carouselImagesItem['path']}">
+									<div class="content theme-two"></div>
+                        			<a href=""><img src="${carouselImagesItem['carousalImage']}" alt="${carouselImagesItem['altText']}"></a>
+                    			</div>
+                	    	</div>
+                        </a>
+                	</div>
+					<div data-sly-test="${!carouselImagesItem['path']}" data-sly-unwrap>
+                        <div data-sly-test="${carouselImagesItem['first'] == 'true'}" data-sly-unwrap>
+							<div class="item text-center active" id="${carouselImagesItem['id']}" data-imagurl="${carouselImagesItem['path']}" >
+                       			<div class="content theme-two"></div>
+                       			<a href= ""><img src="${carouselImagesItem['carousalImage']}" alt="${carouselImagesItem['altText']}"></a>
+                   			</div>
+               	    	</div>
+               			<div data-sly-test="${carouselImagesItem['first'] != 'true'}" data-sly-unwrap>
+							<div class="item text-center" id="${carouselImagesItem['id']}" data-imagurl="${carouselImagesItem['path']}">
+								<div class="content theme-two"></div>
+                       			<a href=""><img src="${carouselImagesItem['carousalImage']}" alt="${carouselImagesItem['altText']}"></a>
+                   			</div>
+               	    	</div>
+                	</div>
+                </div>
+				</div>
+                
+                <div data-sly-test="${internationalCarouselComponent.carouselImages.size > 1}">
+                	<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+	                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+	                    <span class="sr-only">Previous</span>
+	                </a>
+	                <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+	                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+	                    <span class="sr-only">Next</span>
+	                </a>
+                </div>
+            </div>
+		</div>
+		<div class="offer-detail">
+			<div class="carousel-content active " id="monthlycarousal">
+				<div class="container-fluid minimal-cms-content-container max-width">
+					<div class="row">	
+						<div class="col-sm-5 col-xs-12 marquee-headline-box">
+							<div data-sly-resource="${ 'richtext1' @ resourceType='sling-tv/components/content/general/rich-text'}" data-sly-unwrap></div>
+							</div>
+						<div class="col-sm-5 col-xs-12">
+							<div class="row">
+								<div class="col-sm-12 col-xs-12 cta-box">
+									<div data-sly-resource="${ 'ctacomp1' @ resourceType='sling-tv/components/content/general/cta-component'}" data-sly-unwrap></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-content active" id="sixmonthlycarousal">
+				<div class="container-fluid minimal-cms-content-container max-width">
+					<div class="row">	
+						<div class="col-sm-5 col-xs-12 marquee-headline-box">
+							<div data-sly-resource="${ 'richtext2' @ resourceType='sling-tv/components/content/general/rich-text'}" data-sly-unwrap></div>
+							</div>
+						<div class="col-sm-5 col-xs-12">
+							<div class="row">
+								<div class="col-sm-12 col-xs-12 cta-box">
+									<div data-sly-resource="${ 'ctacomp2' @ resourceType='sling-tv/components/content/general/cta-component'}" data-sly-unwrap></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="carousel-content active " id="yearlycarousal">
+				<div class="container-fluid minimal-cms-content-container max-width">
+					<div class="row">	
+						<div class="col-sm-5 col-xs-12 marquee-headline-box">
+							<div data-sly-resource="${ 'richtext3' @ resourceType='sling-tv/components/content/general/rich-text'}" data-sly-unwrap></div>
+							</div>
+						<div class="col-sm-5 col-xs-12">
+							<div class="row">
+								<div class="col-sm-12 col-xs-12 cta-box">
+									<div data-sly-resource="${ 'ctacomp3' @ resourceType='sling-tv/components/content/general/cta-component'}" data-sly-unwrap></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>

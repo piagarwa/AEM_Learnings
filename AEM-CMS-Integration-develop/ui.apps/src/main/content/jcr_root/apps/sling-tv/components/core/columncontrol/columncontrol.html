@@ -1,0 +1,163 @@
+<div data-sly-test="${wcmmode.edit && !properties.setup}">Click here to configure Column Container</div>
+<div data-sly-test="${!placeholder}" data-sly-unwrap>
+   <div class="${!properties.containerPadding && 'container-fluid'} a-la-carte-tv visible">
+    <div class="row">
+
+        <div data-sly-test="${properties.setup == 'two-50-50'}" data-sly-unwrap>
+            <div class="col-xs-12 col-sm-6 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-sm-6 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+
+        <div data-sly-test="${properties.setup == 'two-33-66'}" data-sly-unwrap>
+            <div class="col-xs-12 col-sm-4 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-sm-8 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+
+		<div data-sly-test="${properties.setup == 'two-25-75'}" data-sly-unwrap>
+            <div class="col-xs-12 col-sm-3 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-sm-9 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+
+        <div data-sly-test="${properties.setup == 'two-66-33'}" data-sly-unwrap>
+            <div class="col-xs-12 col-sm-8 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+
+        <div data-sly-test="${properties.setup == 'two-75-25'}" data-sly-unwrap>
+            <div class="col-xs-12 col-sm-9 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-sm-3 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+
+        <div data-sly-test="${properties.setup == 'three'}" data-sly-unwrap>
+            <div class="col-xs-12 col-sm-4 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-sm-4 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parThree', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+
+        <div data-sly-test="${properties.setup == 'three-1-10-1'}" data-sly-unwrap>
+            <div class="col-xs-12 col-md-1 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-10 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-1 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parThree', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+
+        <div data-sly-test="${properties.setup == 'four'}" data-sly-unwrap>
+            <div class="col-xs-12 col-sm-3 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-sm-3 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-sm-3 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parThree', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-sm-3 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parFour', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+		
+		<div data-sly-test="${properties.setup == 'four-2-4-4-2'}" data-sly-unwrap>
+            <div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-4 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-4 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parThree', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parFour', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+		
+		
+		<div data-sly-test="${properties.setup == 'four-1-5-5-1'}" data-sly-unwrap>
+            <div class="col-xs-12 col-md-1 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-5 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-5 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parThree', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-1 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parFour', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+
+		<div data-sly-test="${properties.setup == 'five-2-2-4-2-2'}" data-sly-unwrap>
+            <div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-4 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parThree', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parFour', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+			<div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parFive', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+		
+		<div data-sly-test="${properties.setup == 'six-2-2-2-2-2-2'}" data-sly-unwrap>
+            <div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parOne', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parTwo', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parThree', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+            <div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parFour', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+			<div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parFive', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+			<div class="col-xs-12 col-md-2 ${properties.colPadding && 'graph-container'}">
+                <div data-sly-resource="${ @path='parSix', resourceType='foundation/components/parsys'}" data-sly-unwrap></div>
+            </div>
+        </div>
+
+		
+    </div>
+	</div>
+</div>

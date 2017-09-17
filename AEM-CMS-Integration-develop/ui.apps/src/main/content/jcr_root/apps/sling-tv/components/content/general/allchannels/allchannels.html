@@ -1,0 +1,26 @@
+<div data-sly-use.allChannelObj="com.sling.tv.core.AllChannelsComponent">
+ <div data-sly-test="${wcmmode.edit && !allChannelObj.allChannels}">
+	 			Please author all channel component
+     </div>
+
+    <div class="fadein slower">
+        <div class="mss-packages dark-gradient">
+             <div class="container-fluid">
+				<div class="row">
+				    <ul class="channels col-xs-12 col-sm-10 col-sm-offset-1 ng-scope">
+						<div data-sly-list="${allChannelObj.allChannels}">
+                            <li class="ng-scope"><img data-sly-test="${item.logo}" class="light" id="${item.channelId}" src="${item.logo}"></li>
+						</div>
+						<div class="pull-right" style="clear:both"><a class="sublink ng-binding"  href=${properties.otherServicesLink} target= "_blank">${properties.otherServicesText}</a></div> 
+					</ul>  
+				</div>
+				<div class="row text-center">
+					<div class="channel-legal-disclaimer col-sm-10 col-sm-offset-1">
+							<p class="channel-legal-disclaimer-text ng-binding">${properties.gridDesription}</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

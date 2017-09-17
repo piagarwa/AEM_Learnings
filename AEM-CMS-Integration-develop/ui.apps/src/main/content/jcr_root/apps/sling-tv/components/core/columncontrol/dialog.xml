@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Column Control"
+    xtype="dialog">
+    <items jcr:primaryType="cq:TabPanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <columns
+                jcr:primaryType="cq:Panel"
+                title="Columns">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <setup
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Column Setup:"
+                        name="./setup"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <two-50-50
+                                jcr:primaryType="nt:unstructured"
+                                text="Two Columns (50:50)"
+                                value="two-50-50"/>
+                            <two-33-66
+                                jcr:primaryType="nt:unstructured"
+                                text="Two Columns (33:66)"
+                                value="two-33-66"/>
+                            <two-25-75
+                                jcr:primaryType="nt:unstructured"
+                                text="Two Columns (25:75)"
+                                value="two-25-75"/>
+                            <two-66-33
+                                jcr:primaryType="nt:unstructured"
+                                text="Two Columns (66:33)"
+                                value="two-66-33"/>
+                            <two-75-25
+                                jcr:primaryType="nt:unstructured"
+                                text="Two Columns (75:25)"
+                                value="two-75-25"/>
+                            <three
+                                jcr:primaryType="nt:unstructured"
+                                text="Three Columns (33:33:33)"
+                                value="three"/>
+                            <three-1-10-1
+                                jcr:primaryType="nt:unstructured"
+                                text="Three Columns (10:80:10)"
+                                value="three-1-10-1"/>
+                            <four
+                                jcr:primaryType="nt:unstructured"
+                                text="Four Columns (25:25:25:25)"
+                                value="four"/>
+                        </options>
+                    </setup>
+                </items>
+            </columns>
+        </items>
+    </items>
+</jcr:root>

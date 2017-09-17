@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Template for SlingTV Refer A Friend Page"
+    jcr:primaryType="cq:Template"
+    jcr:title="SlingTV Refer A Friend Page"
+    allowedPaths="[/content/sling-tv(/.+)?]"
+    ranking="{Long}100">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="sling-tv/components/page/referafriend-page">
+        <par
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <full-width-marquee
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="sling-tv/components/content/general/full-width-marquee"/>
+            <column-control
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="sling-tv/components/core/columncontrol"/>
+            <cta-component1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="sling-tv/components/content/general/cta-component"/>
+            <rich-text
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="sling-tv/components/content/general/rich-text"/>
+            <device-ribbons
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="sling-tv/components/content/general/device-ribbon"/>
+        </par>
+    </jcr:content>
+</jcr:root>

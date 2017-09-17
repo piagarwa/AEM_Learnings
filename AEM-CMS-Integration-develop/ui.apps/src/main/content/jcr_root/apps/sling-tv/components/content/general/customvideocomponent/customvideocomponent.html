@@ -1,0 +1,76 @@
+<style>
+
+.thevideo {
+  display: none;
+}
+.closeBtn {
+  float: right;
+  color: #14ABE0;
+  font-size: 20px;
+  line-height: 25px;
+}
+ .youtubeContainer {
+  cursor: pointer;
+}
+.videoContainer iframe {
+  width: 100%;
+  height: 315px;
+}
+
+</style>
+
+<sly data-sly-test.author="${wcmmode.edit}"></sly>
+<div class="youtubeContainer" style="padding-right:${properties.paddingRight @ context='styleToken'}%;padding-left:${properties.paddingLeft @ context='styleToken'}%;height:${properties.imageHeight @ context='styleToken'}%;width:${properties.imageWidth @ context='styleToken'}%">
+	<sly data-sly-test.isLink="${properties.videolink || properties.damVideoLink}"></sly>
+	<sly data-sly-test="${!isLink}">
+		<div data-sly-test="${author}">Edit Custom Video Component</div>
+	</sly>
+	<sly data-sly-test="${isLink}">
+    	<input type="hidden" class="damVideoLink" data-width="${properties.imageWidth}" data-height="${properties.imageHeight}" value="${properties.damVideoLink}"/>
+		<input type="hidden" class="videoLink" name="videoLink" value="https://www.youtube.com/embed/${properties.videolink}?rel=0&autoplay=1"/>
+		<img class="youtubePlayButton" width="100%" height="100%" src="${properties.imageLink}" alt="${properties.altText}"/>
+		<div class="thevideo">
+			<span class='fa fa-times-circle closeBtn'></span>
+		<div class="videoContainer"></div>
+		</div>
+	</sly>
+
+</div>
+
+<script>
+		$(document).ready(function(){
+				$('.youtubePlayButton').click(function(event){
+            	event.stopPropagation();
+                event.stopImmediatePropagation();
+				var damVideoLink = $(this).prevAll('.damVideoLink:first').val();
+                console.log(damVideoLink);
+                if( damVideoLink.length === 0 ) {
+					var iframe = document.createElement('iframe');
+               		iframe.src=$(this).prev('.videoLink').val();
+                	iframe.frameborder="0";
+                	$(this).next('.thevideo').show().find('.videoContainer').append(iframe);
+                 }else{
+					//var width = $(this).prevAll('.damVideoLink:first').attr('data-width')+'%';
+                   // var height = $(this).prevAll('.damVideoLink:first').attr('data-height')+'%';
+                    var video = '<video id="intro-video" width="100%" height="100%" autoplay controls><source src="' + damVideoLink + '"/></video>'; 
+                    $(this).next('.thevideo').show().find('.videoContainer').append(video);
+
+					var videl = $(document).find('#intro-video')[0]; // find the newly inserterd video
+
+					videl.load();
+                 }
+
+
+                $(this).hide();
+            });
+            $('.closeBtn').click(function(){
+				$(this).next('.videoContainer').html('');
+                $(this).parent().prev('.youtubePlayButton').show();
+                $(this).parent().hide();
+            });
+        });
+
+</script>
+
+
+

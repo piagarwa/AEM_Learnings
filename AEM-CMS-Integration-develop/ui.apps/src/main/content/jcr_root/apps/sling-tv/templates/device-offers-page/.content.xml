@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Template for creating Sling TV Device Offers pages."
+    jcr:primaryType="cq:Template"
+    jcr:title="Device offers landing page template"
+    allowedPaths="[/content/sling-tv(/.+)?]"
+    ranking="{Long}100">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="sling-tv/components/page/device-offers-page">
+		<par
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="wcm/foundation/components/parsys">
+			<banner-component
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/container-component"/>
+			<offer-component
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/container-component"/>
+		    <cta-container-component
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/container-component"/>
+      	</par> 
+    </jcr:content>
+</jcr:root>

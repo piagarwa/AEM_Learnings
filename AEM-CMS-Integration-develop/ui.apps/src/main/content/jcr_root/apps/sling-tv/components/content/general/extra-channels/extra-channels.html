@@ -1,0 +1,24 @@
+<div data-sly-use.extraChannelComponent="com.sling.tv.core.ExtraChannelComponent">
+     <div data-sly-test="${wcmmode.edit && ((!extraChannelComponent.extraChannelBean.extraChannelLogos) && (!extraChannelComponent.extraChannelBean.extraChannelNames))}">
+	 			Please author extra channel component
+     </div>
+
+    <div class="row">
+        <ul class="extra-channels-images col-sm-12 hidden-xs">
+    		<div data-sly-list.extraChannelLogo="${extraChannelComponent.extraChannelBean.extraChannelLogos}" data-sly-unwrap>
+                <li  class="ng-scope"><img alt="${extraChannelLogo['altText']}" src="${extraChannelLogo['logo']}"></li>
+			</div>
+        </ul>
+        <ul class="extra-channels-list">
+        	<div data-sly-list.extraChannelLogo="${extraChannelComponent.extraChannelBean.extraChannelLogos}" data-sly-unwrap>
+				<li class="col-sm-12 col-xs-6 channel visible-xs ng-scope" >${extraChannelLogo['altText']}</li>
+             </div>
+			 <div data-sly-list.extraChannelItem="${extraChannelComponent.extraChannelBean.extraChannelNames}" data-sly-unwrap>
+                <li class="col-sm-12 col-xs-6 channel visible-xs ng-scope">${extraChannelItem @ context ='html'}</li>
+			</div>
+			<div data-sly-list.extraChannelItem="${extraChannelComponent.extraChannelBean.extraChannelNames}" data-sly-unwrap>
+                <li class="col-xs-6 col-sm-4 col-md-6 channel hidden-xs bold fine-print ng-scope">${extraChannelItem @ context ='html'}</li>
+			</div>
+        </ul>    
+    </div>
+</div>

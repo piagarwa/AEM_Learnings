@@ -1,0 +1,91 @@
+        <!-- Footer Starts Here: -->
+        <footer class="container-wrap delay-show slow" data-sly-use.navigationComponent="com.sling.tv.core.models.NavigationComponentModel">
+		<div data-sly-test="${wcmmode.edit && !navigationComponent.footer.children}">Click here to configure Footer Component</div>
+            <div class="sitemap">
+                <div class="container-fluid max-width">         
+					<sly data-sly-repeat="${ navigationComponent.footer.children }">
+					    <sly data-sly-test=${itemList.count==7}>								  
+						    <div class="clearfix"></div>
+						</sly>
+						<div class="col-sm-3 col-xs-12">
+                           <div class="${item.uniqueId}">
+						        <h6 class="sitemap-headline extra-bold text-uppercase ${item.hideInDesktopNav && 'hidden-lg'}  ${item.hideInMobileNav && 'hidden-xs'} ${item.hideInDesktopNav && 'hidden-sm'} ${item.hideInDesktopNav && 'hidden-md'} ">
+								     ${item.title}
+								</h6>
+									<nav>
+										<sly data-sly-repeat="${ item.children }">
+											<ul>
+												<sly data-sly-test="${! item.children }">
+												<li class="bold left ${item.hideInMobileNav && 'hidden-xs'} ${item.hideInDesktopNav && 'hidden-lg'} ${item.hideInDesktopNav && 'hidden-sm'} ${item.hideInDesktopNav && 'hidden-md'}"><a x-cq-linkchecker="skip" data-sly-use.footerNav="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=item.link}" href="${footerNav.formattedLink}" target="${item.windowSelection}">${item.title}</a></li>
+												</sly>
+												
+												<sly data-sly-test="${ item.children }">
+												<div>
+													<span class="btn-group" dropdown="">
+													
+													<a x-cq-linkchecker="skip" class="dropdown-toggle ${item.hideInMobileNav && 'hidden-xs'} ${item.hideInDesktopNav && 'hidden-lg'} ${item.hideInDesktopNav && 'hidden-sm'} ${item.hideInDesktopNav && 'hidden-md'}" data-toggle="dropdown" type="button" target="${item.windowSelection}" href="#">${item.title} <span class="caret ${item.hideInMobileNav && 'hidden-xs'} ${item.hideInDesktopNav && 'hidden-lg'} ${item.hideInDesktopNav && 'hidden-sm'} ${item.hideInDesktopNav && 'hidden-sm'} ${item.hideInDesktopNav && 'hidden-md'}"></span></a>
+
+													
+													<ul class="dropdown-menu ${item.uniqueId} ${item.hideInMobileNav && 'hidden-xs'} ${item.hideInDesktopNav && 'hidden-lg'} ${item.hideInDesktopNav && 'hidden-sm'} ${item.hideInDesktopNav && 'hidden-md'}" role="menu">
+														<li class="bold left"> ${item.subtitle} <span class="pull-right"><a x-cq-linkchecker="skip" class="close-dropdown">x</a></span></li>
+													
+														<sly data-sly-repeat="${ item.children }">
+														
+														<li><a x-cq-linkchecker="skip" class="languages-list ${item.hideInMobileNav && 'hidden-xs'}" data-sly-use.footerSubNav="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=item.link}" href="${footerSubNav.formattedLink}" target="${item.windowSelection}">${item.title}</a></li>
+														</sly>
+													</ul>	
+													
+												</div>
+												</sly>
+											</ul>								
+									   </sly>
+                                    </nav>
+							</div>	
+						</div>								
+					</sly>
+							 
+						  
+                            
+				</div>
+					
+			</div>
+			
+			
+			<div class="container-fluid max-width terms">
+			    <!-- RTE for Terms of Use comes here -->				
+			    <div data-sly-resource="${ @path='terms', resourceType='sling-tv/components/content/general/rich-text'}" data-sly-unwrap></div>
+			</div>
+			
+			<sly data-sly-test.author="${wcmmode.edit || wcmmode.design}"></sly>
+            <sly data-sly-test="${pageProperties.showReferAFriend}">
+                <div class="${!author ? 'referaFriend' : ''} container-fluid">
+                    <div style="clear:both"><sly data-sly-resource="${'textimage' @ resourceType='wcm/foundation/components/textimage'}"></sly></div>
+	                <div style="clear:both" class="stickyNote"><sly data-sly-resource="${'image' @ resourceType='wcm/foundation/components/image'}"></sly></div>
+				</div>
+            </sly>
+			
+			<div class="copyright">
+                <div class="container-fluid max-width">
+                    <div class="questions pull-right">					  
+                        <!-- RTE for questions Comes Here: -->						 
+						<div class= "pull-right" data-sly-resource="${ @path='questionsPar', resourceType='sling-tv/components/content/general/rich-text'}" data-sly-unwrap></div>
+                    </div>                    
+                    <div class="copy-social-elements">
+	                    <!-- Social Link Components Comes here: -->	
+						
+                        <sly data-sly-test="${ properties.socialLinkComponent }">
+                           <div data-sly-resource="${ @path='socialMediaLinks', resourceType='sling-tv/components/core/socialMediaLinks'}" data-sly-unwrap></div>
+                        </sly>
+                        
+                    </div>
+					<div class="copytext">                            
+							<!-- RTE for copytext Comes here: -->	
+                            <div data-sly-resource="${ @path='copyPar', resourceType='sling-tv/components/content/general/rich-text'}" data-sly-unwrap></div>
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- Footer Ends Here: -->
+		
+		

@@ -1,0 +1,26 @@
+<!-- CTA(Call To Action) Text Configuration - Start -->
+<div data-sly-test="${wcmmode.edit && !properties.alaCarteCarouselImages}">Configure carousel/image</div>
+<div class="carousel-graph slide js-carouselgraph" data-ride="carousel" data-sly-use.alacarteCarousel="com.sling.tv.core.models.AlaCarteCarouselModel">
+    <ol class="carousel-indicators ${alacarteCarousel.alaCarteCarouselList.size == 1 && 'hide'}">
+		<sly data-sly-list="${alacarteCarousel.alaCarteCarouselList}">	
+            <li data-target=".js-carouselgraph" data-slide-to="${itemList.index}" class="${itemList.index==0 && 'active'} ${item.barColor}"></li>
+		<sly>
+    </ol>
+	<div class="carousel-inner" role="listbox">
+		<sly data-sly-list="${alacarteCarousel.alaCarteCarouselList}">		   
+			<div class="item text-center ${itemList.index==0 && 'active'}"><img class="graph-image" src="${item.imagePath}" alt="${item.alt}"></div>
+		</sly>
+	</div>
+</div>
+
+                
+            
+        
+
+
+
+
+
+
+
+                                        

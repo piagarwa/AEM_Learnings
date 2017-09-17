@@ -1,0 +1,22 @@
+<div data-sly-test="${wcmmode.edit}">
+    Edit the A La Carte Package Extra Pods 
+ </div>
+<div class="container-fluid max-width a-la-carte-tv" >
+	<div class="row row-spacing" data-sly-use.imageGrid="com.sling.tv.core.models.MultiFieldModel">
+	    <div class="col-xs-12">
+	        <div class="row">
+	        <sly data-sly-list="${imageGrid.multiFieldBeans}" >
+	            <div class="col-xs-12 col-sm-6 genres genre-center-offset ${(itemList.last && itemList.odd)? 'center-item':''}" >
+	                <div class="row">
+	                    <div class="col-xs-3"><img class="genre-icon" alt="${item.alt}" src="${item.link}"></div>
+	                    <div class="col-xs-9">
+	                        <h6>${item.title}</h6>
+	                        <p>${item.description}</p>
+	                    </div>
+	                </div>
+	            </div>
+	        </sly>    
+	     </div>
+	   	</div>
+	</div>
+</div>

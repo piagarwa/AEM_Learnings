@@ -1,0 +1,1026 @@
+/* ========== Game Finder ========== */
+
+.gamefinder-component {
+  text-align: center;
+}
+
+.gamefinder-component .gamefinder-container {
+  width: 100%;
+  display: inline-block;
+}
+
+.gamefinder-component h1 {
+  color: #FCBF38;
+  font-weight: 900;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.gamefinder-component h2 {
+  color: #FFFFFF;
+  font-size: 13px;
+  line-height: 23px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .gamefinder-component h1 {
+    font-size: 73px;
+    letter-spacing: 4px;
+    line-height: 60px;
+  }
+}
+@media (max-width: 767px) {
+  .gamefinder-component h1 {
+    letter-spacing: 1px;
+    font-size: 26px;
+    line-height: 33px;
+  }
+}
+
+#gamefinder-search-container.gamefinder-search-fixed {
+  position: fixed;
+  background-color: black;
+  top: 73px;
+  width: 90%;
+  margin-top: 0;
+  z-index: 3;
+}
+
+.gamefinder-sport-fixed {
+  position: fixed;
+  background-color: black;
+  padding: 10px 0;
+  top: 160px;
+  width: 90%;
+  z-index: 3;
+}
+
+.gamefinder-results-false-header {
+  display: none;
+}
+
+.gamefinder-results-fixed .gamefinder-results-false-header {
+  display: block;
+  position: fixed;
+  color: #FFFFFF;
+  font-weight: bold;
+  border-top: 1px solid #979797;
+  border-bottom: 1px solid #979797;
+  margin-bottom: 5px;
+  top: 238px;
+  background-color: black;
+  z-index: 3;
+}
+
+.gamefinder-results-fixed .gamefinder-results-false-header .gamefinder-results-false-header-column {
+  float: left;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.gamefinder-results-fixed .gamefinder-results-false-header .gamefinder-date-button {
+  float: none;
+  padding-top: 0;
+}
+
+
+@media (min-width: 1024px) {
+  #gamefinder-search-container.gamefinder-search-fixed {
+    width: 90%;
+  }
+
+  .gamefinder-results-fixed {
+    margin-top: 228px;
+  }
+
+  .gamefinder-results-fixed .gamefinder-results-false-header {
+    border-top: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+    height: 65px;
+    font-size: 24px;
+    line-height: 36px;
+    padding-left: 18px;
+    width: 90%;
+  }
+  .gamefinder-results-fixed .gamefinder-results-false-header .gamefinder-results-false-header-column {
+    padding-top: 14px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  #gamefinder-search-container.gamefinder-search-fixed {
+    width: 90%;
+  }
+
+  .gamefinder-results-fixed {
+    margin-top: 207px;
+  }
+
+  .gamefinder-results-fixed .gamefinder-results-false-header {
+    border-top: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+    height: 55px;
+    font-size: 22px;
+    line-height: 34px;
+    padding-left: 10px;
+    width: 90%;
+  }
+  .gamefinder-results-fixed .gamefinder-results-false-header .gamefinder-results-false-header-column {
+    padding-top: 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  #gamefinder-search-container.gamefinder-search-fixed {
+    width: calc(100% - 30px);
+  }
+
+  .gamefinder-results-fixed .gamefinder-results-false-header {
+    border-top: 2px solid #353535;
+    border-bottom: 2px solid #353535;
+    width: calc(100% - 30px);
+  }
+  .gamefinder-sport-fixed {
+    padding-bottom: 5px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+  .gamefinder-results-fixed {
+    margin-top: 88px;
+  }
+
+  .gamefinder-results-fixed .gamefinder-results-false-header {
+    height: 21px;
+    font-size: 11px;
+    line-height: 17px;
+  }
+  .gamefinder-results-fixed .gamefinder-results-false-header .gamefinder-results-false-header-column-wrapper {
+    padding-left: 18px;
+  }
+  .gamefinder-results-fixed .gamefinder-results-false-header .gamefinder-results-false-header-column {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 399px) {
+  #gamefinder-search-container.gamefinder-search-fixed .gamefinder-search-wrapper {
+    margin-top: 0;
+  }
+
+  .gamefinder-results-fixed {
+    margin-top: 144px;
+  }
+
+  .gamefinder-results-fixed .gamefinder-results-false-header {
+    height: 21px;
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .gamefinder-results-fixed .gamefinder-results-false-header .gamefinder-results-false-header-column-wrapper {
+    padding-left: 8px;
+  }
+  .gamefinder-results-fixed .gamefinder-results-false-header .gamefinder-results-false-header-column {
+    padding-top: 0;
+  }
+}
+
+
+.gamefinder-search-wrapper {
+  position: relative;
+  float: left;
+}
+
+.gamefinder-zip-wrapper {
+  position: relative;
+  float: right;
+}
+
+.gamefinder-component .gamefinder-search {
+  box-sizing: border-box;
+  border: 1px solid #FCBF38;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+.gamefinder-search:focus {
+  outline: none;
+  border-color: #14ABE0;
+}
+
+.gamefinder-search::placeholder {
+  color: #FFFFFF;
+}
+
+.gamefinder-search-icon {
+  position: absolute;
+  color: #FFFFFF;
+}
+
+.gamefinder-component .gamefinder-zip {
+  box-sizing: border-box;
+  border: 1px solid #FCBF38;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-weight: bold;
+  -moz-appearance: textfield;
+}
+
+.gamefinder-zip::-webkit-outer-spin-button,
+.gamefinder-zip::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.gamefinder-zip:focus {
+  outline: none;
+  border-color: #14ABE0;
+}
+
+.gamefinder-zip::placeholder {
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  #gamefinder-search-container {
+    margin-top: 70px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gamefinder-component .gamefinder-search {
+    height: 80px;
+    width: 482px;
+    font-size: 26px;
+    line-height: 36px;
+    padding-left: 21px;
+  }
+  .gamefinder-search::placeholder {
+    color: #FFFFFF;
+    font-size: 26px;
+  }
+  .gamefinder-search-icon {
+    left: 425px;
+    top: 25px;
+    font-size: 30px;
+  }
+  .gamefinder-component .gamefinder-zip {
+    height: 80px;
+    width: 482px;
+    font-size: 26px;
+    line-height: 36px;
+    padding-left: 21px;
+  }
+  .gamefinder-zip::placeholder {
+    color: #FFFFFF;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gamefinder-component .gamefinder-search {
+    height: 60px;
+    width: 345px;
+    font-size: 18px;
+    line-height: 27px;
+    padding-left: 16px;
+  }
+  .gamefinder-search::placeholder {
+    color: #FFFFFF;
+    font-size: 18px;
+  }
+  .gamefinder-search-icon {
+    left: 310px;
+    top: 17px;
+    font-size: 24px;
+  }
+  .gamefinder-component .gamefinder-zip {
+    height: 60px;
+    width: 345px;
+    font-size: 18px;
+    line-height: 27px;
+    padding-left: 16px;
+  }
+  .gamefinder-zip::placeholder {
+    color: #FFFFFF;
+    font-size: 18px;
+  }
+}
+
+@media (max-width:767px) {
+  #gamefinder-search-container {
+    margin-top: 10px;
+  }
+  .gamefinder-component .gamefinder-search {
+    font-size: 12px;
+    line-height: 14px;
+    height: 45px;
+    padding-left: 8px;
+  }
+  .gamefinder-search::placeholder {
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .gamefinder-component .gamefinder-zip {
+    font-size: 12px;
+    line-height: 14px;
+    height: 45px;
+    padding-left: 8px;
+  }
+  .gamefinder-zip::placeholder {
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+  .gamefinder-component .gamefinder-search {
+    width: 180px;
+  }
+  .gamefinder-search-icon {
+    left: 159px;
+    top: 14px;
+  }
+  .gamefinder-component .gamefinder-zip {
+    width: 180px;
+  }
+}
+
+@media (max-width: 399px) {
+  .gamefinder-search-wrapper {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .gamefinder-zip-wrapper {
+    float: none;
+    width: 100%;
+    margin-top: 10px;
+  }
+  .gamefinder-component .gamefinder-search {
+    width: 100%;
+  }
+  .gamefinder-search-icon {
+    right: 15px;
+    top: 15px;
+  }
+  .gamefinder-component .gamefinder-zip {
+    width: 100%;
+  }
+}
+
+.gamefinder-sport-container {
+  text-align: left;
+  clear: both;
+  position: relative;
+}
+
+.gamefinder-sport-container label {
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.gamefinder-sport-container input[type=checkbox] {
+  display: none;
+}
+
+.gamefinder-sport-container input[type=checkbox] + label:before {
+  content: "\f00c";
+  font-family: FontAwesome;
+  color: #000000;
+  display: inline-block;
+  border: 1px solid #14ABE0;
+}
+
+.gamefinder-sport-container input[type=checkbox]:checked + label:before{
+  content: "\f00c";
+  font-family: FontAwesome;
+  color: #000000;
+  background: #14ABE0;
+}
+
+.gamefinder-sport-wrapper {
+  display: inline;
+}
+
+.gamefinder-sports-page-btn {
+  position: absolute;
+  top: auto;
+}
+
+@media (min-width: 768px) {
+  .gamefinder-sport-container {
+    padding-top: 26px;
+    padding-left: 2px;
+    padding-bottom: 26px;
+  }
+  .gamefinder-sport-container label {
+    font-size: 24px;
+    line-height: 18px;
+    margin-right: 30px;
+  }
+  .gamefinder-sport-container input[type=checkbox] + label:before {
+    margin-right: 8px;
+    margin-left: 0;
+    vertical-align: 2px;
+    height: 21px;
+    width: 21px;
+    font-size: 20px;
+  }
+  .gamefinder-sports-page-btn {
+    padding-top: 3px;
+  }
+  .gamefinder-sports-prev-btn {
+    left: -20px;
+  }
+  .gamefinder-sports-next-btn {
+    left: calc(100% + 20px);
+  }
+}
+
+@media (max-width: 767px) {
+  .gamefinder-sport-container {
+    padding-top: 10px;
+    padding-left: 2px;
+    margin-bottom: 5px;
+  }
+  .gamefinder-sport-container label {
+    font-size: 11px;
+    line-height: 10px;
+  }
+  .gamefinder-sport-container input[type=checkbox] + label:before {
+    margin-right: 6px;
+    margin-left: 5px;
+    height: 11px;
+    width: 11px;
+    font-size: 9px;
+  }
+  .gamefinder-sports-page-btn {
+    font-size: 8px;
+    padding-top: 7px;
+  }
+  .gamefinder-sports-prev-btn {
+    left: -5px;
+  }
+  .gamefinder-sports-next-btn {
+    left: calc(100% + 5px);
+  }
+}
+
+
+.gamefinder-results-container table {
+  width: 100%;
+  text-align: left;
+  color: #FFFFFF;
+  font-weight: 600;
+  border-bottom: 1px solid #353535;
+}
+
+.gamefinder-results-container th {
+  color: #FFFFFF;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.gamefinder-results-time-note {
+  font-weight: lighter;
+}
+
+.gamefinder-results-container .gamefinder-results-spacer {
+  height: auto;
+}
+
+.gamefinder-results-container .gamefinder-results-spacer td {
+  padding-bottom: 10px;
+  margin: auto;
+}
+
+.gamefinder-blackout-disclaimer {
+  color: #FFFFFF;
+  font-style: italic;
+  text-align: center;
+  font-weight: 400;
+  padding-top: 5px;
+}
+
+.gamefinder-results-odd-row {
+  background-color: #1F1F1F;
+}
+
+.gamefinder-results-expand {
+  padding-top: 10px;
+  padding-right: 5px;
+}
+
+tr.gamefinder-results-expanded {
+  color: #FCBF38;
+  text-align: left;
+}
+
+tr.gamefinder-results-expanded td.gamefinder-results-affiliation {
+  color: #FFFFFF;
+}
+
+tr.gamefinder-results-collapsed {
+  display: none;
+}
+
+.gamefinder-results-container tr.gamefinder-results-expanded {
+  height: auto;
+}
+
+@media (min-width: 1024px) {
+  .gamefinder-results-container table {
+    font-size: 24px;
+    line-height: 34px;
+    margin-bottom: 40px;
+  }
+  .gamefinder-results-container .gamefinder-results-header {
+    border-top: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+    height: 65px;
+  }
+  .gamefinder-results-container th {
+    font-size: 24px;
+    line-height: 36px;
+    margin-bottom: 5px;
+    padding-left: 18px;
+  }
+  .gamefinder-results-container tr {
+    height: 60px;
+  }
+  .gamefinder-results-container td {
+    padding-left: 18px;
+  }
+  .gamefinder-results-display-mobile {
+    display: none;
+  }
+  tr.gamefinder-results-expanded td.gamefinder-results-details {
+    padding-right: 80px;
+  }
+  .gamefinder-results-details-no-zip {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .gamefinder-results-details-with-zip {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+  .gamefinder-date-button {
+    padding-left: 8px;
+  }
+  .gamefinder-results-time-note {
+    padding-left: 8px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gamefinder-results-date-column {
+    width: 175px;
+  }
+  .gamefinder-results-time-column {
+    width: 175px;
+  }
+  .gamefinder-results-channel-column {
+    width: 125px;
+  }
+  .gamefinder-results-button-column {
+    width: 75px;
+  }
+  .gamefinder-blackout-disclaimer {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1199px) {
+  .gamefinder-results-date-column {
+    width: 125px;
+  }
+  .gamefinder-results-time-column {
+    width: 125px;
+  }
+  .gamefinder-results-channel-column {
+    width: 75px;
+  }
+  .gamefinder-results-button-column {
+    width: 50px;
+  }
+  .gamefinder-blackout-disclaimer {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gamefinder-results-container table {
+    font-size: 20px;
+    line-height: 32px;
+    margin-bottom: 40px;
+  }
+  .gamefinder-results-date-column {
+    width: 100px;
+  }
+  .gamefinder-results-time-column {
+    width: 125px;
+  }
+  .gamefinder-results-channel-column {
+    width: 80px;
+  }
+  .gamefinder-results-button-column {
+    width: 30px;
+  }
+  .gamefinder-results-container .gamefinder-results-header {
+    border-top: 1px solid #979797;
+    border-bottom: 1px solid #979797;
+    height: 55px;
+  }
+  .gamefinder-results-container th {
+    font-size: 22px;
+    line-height: 34px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }
+  .gamefinder-blackout-disclaimer {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .gamefinder-results-container tr {
+    height: 50px;
+  }
+  .gamefinder-results-container td {
+    padding-left: 10px;
+  }
+  .gamefinder-results-display-desktop {
+    display: none;
+  }
+  tr.gamefinder-results-expanded td.gamefinder-results-details {
+    padding-right: 60px;
+  }
+  .gamefinder-results-details-no-zip {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .gamefinder-results-details-with-zip {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  .gamefinder-date-button {
+    padding-left: 8px;
+  }
+  .gamefinder-results-time-note {
+    padding-left: 8px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gamefinder-results-container .gamefinder-results-header {
+    border-top: 2px solid #353535;
+    border-bottom: 2px solid #353535;
+    height: 21px;
+  }
+  .gamefinder-results-container tr {
+    height: 27px;
+  }
+  tr.gamefinder-results-expanded td.gamefinder-results-details {
+    padding-right: 25px;
+  }
+  .gamefinder-results-container tr.gamefinder-results-expanded {
+    height: 21px;
+  }
+  .gamefinder-date-button {
+    padding-left: 4px;
+  }
+  .gamefinder-results-time-note {
+    padding-left: 4px;
+  }
+  .gamefinder-results-container .gamefinder-results-spacer td {
+    padding: 5px 0;
+    margin: auto;
+  }
+  .gamefinder-blackout-disclaimer {
+    font-size: 9px;
+    line-height: 12px;
+  }
+}
+
+@media (min-width: 400px) and (max-width: 767px) {
+  .gamefinder-results-container table {
+    font-size: 11px;
+    line-height: 16px;
+    margin-bottom: 18px;
+  }
+  .gamefinder-results-container th {
+    height: 17px;
+    font-size: 11px;
+    line-height: 17px;
+    margin-bottom: 5px;
+    padding-left: 18px;
+  }
+  .gamefinder-results-date-column {
+    width: 80px;
+  }
+  .gamefinder-results-time-column {
+    width: 80px;
+  }
+  .gamefinder-results-channel-column {
+    width: 60px;
+  }
+  .gamefinder-results-button-column {
+    width: 30px;
+  }
+  .gamefinder-results-container td {
+    padding-left: 10px;
+  }
+  .gamefinder-results-display-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 399px) {
+  .gamefinder-results-container table {
+    font-size: 10px;
+    line-height: 15px;
+    margin-bottom: 18px;
+  }
+  .gamefinder-results-container th {
+    height: 15px;
+    font-size: 10px;
+    line-height: 15px;
+    margin-bottom: 5px;
+    padding-left: 8px;
+  }
+  .gamefinder-results-date-column {
+    width: 50px;
+  }
+  .gamefinder-results-time-column {
+    width: 60px;
+  }
+  .gamefinder-results-channel-column {
+    width: 45px;
+  }
+  .gamefinder-results-button-column {
+    width: 20px;
+  }
+  .gamefinder-results-container td {
+    padding-left: 8px;
+  }
+  .gamefinder-results-display-desktop {
+    display: none;
+  }
+}
+
+
+.gamefinder-results-error {
+  width: 75%;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin: auto;
+}
+
+.gamefinder-date-pseudo-select {
+  /* Hidden until onClick of date */
+  background-color: #000000;
+  text-align: center;
+  color: #FFFFFF;
+  display: none;
+}
+
+.gamefinder-date-selected {
+  background-color: #000000;
+}
+
+@media (min-width: 768px) {
+  .gamefinder-results-false-header .gamefinder-date-pseudo-select {
+    background: black;
+    width: 100%;
+    padding: 0;
+    text-align: center;
+    clear: both;
+  }
+  .gamefinder-date-pseudo-select {
+    box-sizing: border-box;
+  }
+  .gamefinder-date-pseudo-select>div {
+    box-sizing: border-box;
+    float: left;
+    width: 12.5%;
+    font-weight: 400;
+    border: 2px solid #000000;
+  }
+  .gamefinder-date-pseudo-select>div>small {
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+  .gamefinder-date-pseudo-select .gamefinder-date-mobile {
+    display: none;
+  }
+  .gamefinder-date-pseudo-select .gamefinder-date-selected {
+    font-weight: 700;
+    border: 2px solid #14ABE0;
+    background-color: #000000;
+  }
+  .gamefinder-results-error {
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gamefinder-date-pseudo-select {
+    height: 95px;
+  }
+  .gamefinder-date-pseudo-select>div {
+    line-height: 40px;
+    font-size: 30px;
+    height: 95px;
+    padding-top: 5px;
+  }
+  .gamefinder-date-pseudo-select>div>small {
+    font-size: 24px;
+    line-height: 26px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .gamefinder-results-false-header .gamefinder-date-pseudo-select {
+    margin-top: 54px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gamefinder-results-false-header .gamefinder-date-pseudo-select {
+    margin-top: 64px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .gamefinder-results-false-header .gamefinder-date-pseudo-select {
+    margin-top: 54px;
+  }
+  .gamefinder-date-pseudo-select {
+    height: 75px;
+  }
+  .gamefinder-date-pseudo-select>div {
+    height: 75px;
+    font-size: 24px;
+    line-height: 35px;
+  }
+  .gamefinder-date-pseudo-select>div>small {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gamefinder-results-false-header .gamefinder-date-pseudo-select {
+    text-transform: none;
+    margin-top: 25px;
+    width: 100%;
+  }
+
+  .gamefinder-date-pseudo-select {
+    /* Hidden until onClick of date */
+    width: calc(100% - 30px);
+    border: 1px solid #14ABE0;
+    background-color: #000000;
+    text-align: center;
+    color: #FFFFFF;
+    font-size: 12px;
+    line-height: 17px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    position: absolute;
+    display: none;
+    z-index: 3;
+    font-weight: 400;
+  }
+  .gamefinder-date-pseudo-select-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    left: -15px;
+    position: absolute;
+    z-index: 2;
+    display: none;
+  }
+  .gamefinder-date-desktop {
+    display: none;
+  }
+  .gamefinder-date-selected {
+    border-top: 1px solid #14ABE0;
+    border-bottom: 1px solid #14ABE0;
+    background-color: #000000;
+    color: #14ABE0;
+    font-weight: 700;
+  }
+  .gamefinder-date-selected:first-child {
+    border-top: none;
+  }
+  .gamefinder-date-selected:last-child {
+    border-bottom: none;
+  }
+  .gamefinder-results-error {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+.gamefinder-results-page-btn {
+  color: #14ABE0;
+}
+
+.gamefinder-results-prev-btn {
+  float: left;
+}
+
+.gamefinder-results-next-btn {
+  float: right;
+}
+
+.gamefinder-results-cta {
+  clear: both;
+  margin-top: 10px;
+}
+
+.gamefinder-offer-details {
+  color: #14ABE0;
+  text-decoration: underline;
+  display: block;
+  margin-top: 14px;
+}
+
+@media (min-width: 768px) {
+  .gamefinder-results-page-btn {
+    font-size: 24px;
+    line-height: 34px;
+  }
+  .gamefinder-results-cta {
+    height: 70px;
+    font-size: 23px;
+    width: 534px;
+    padding-top: 20px;
+    display: block;
+    margin: auto;
+  }
+  .gamefinder-offer-details {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gamefinder-results-page-btn {
+    font-size: 11px;
+    line-height: 16px;
+  }
+  .gamefinder-offer-details {
+    font-size: 11px;
+    line-height: 16px;
+  }
+}
+
+.gamefinder-see-all {
+  border: 1px solid #14ABE0;
+  color: #14ABE0;
+  text-align: center;
+  display: inline-block;
+  margin: auto;
+  clear: both;
+}
+
+.gamefinder-see-all .fa-chevron-right {
+  font-size: 85%;
+}
+
+@media (min-width: 768px) {
+  .gamefinder-see-all {
+    font-size: 30px;
+    line-height: 40px;
+    padding: 8px 15px 8px 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-width: 2px;
+  }
+}
+
+@media (max-width: 767px) {
+  .gamefinder-see-all {
+    font-size: 12px;
+    line-height: 17px;
+    padding: 5px 7px 5px 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

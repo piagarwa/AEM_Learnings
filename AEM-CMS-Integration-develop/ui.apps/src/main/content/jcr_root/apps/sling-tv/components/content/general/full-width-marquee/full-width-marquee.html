@@ -1,0 +1,26 @@
+<sly data-sly-test="${wcmmode.edit && !properties.marqueeTitle && !properties.imageURL}">click here to configure Marquee Full Width</sly>
+
+    <sly data-sly-test = "${properties.imageURL}" >
+
+    <div class="col-xs-12 raf-page-header" style="background: url('${properties.imageURL @ context='uri'}'); background-size:cover;">
+
+        <div class="container">
+
+            <h1 class="large white bold text-center">${properties.marqueeTitle}</h1>
+            
+            <h4 class="bold text-center">${properties.marqueeDesc}</h4>
+
+    	</div>
+    
+        <sly data-sly-test="${properties.includeCtaComponent}">
+            <div class="row text-center cta-container">
+            <div data-sly-resource="${ @path='heroCTA', resourceType='sling-tv/components/content/general/cta-component'}" data-sly-unwrap></div>
+            </div>
+
+        </sly>
+
+	</div>
+    <div style="clear:both;"></div>
+    </sly>
+
+

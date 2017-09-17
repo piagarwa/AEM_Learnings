@@ -1,0 +1,172 @@
+    <div data-sly-test="${wcmmode.edit && !properties.monthlyTitle}">Configure Dynamic-Grid Component</div>
+
+    <div data-sly-use.dynamicGridComponent="com.sling.tv.core.DynamicGridComponent">
+	
+	<input type="hidden" id="extraPagePath" value="${dynamicGridComponent.dynamicGridBean.extraPagePath}">
+	
+	<input type="hidden" id="m25Channels" value="${dynamicGridComponent.dynamicGridBean.m25ChannelIds}">
+	<input type="hidden" id="m30Channels" value="${dynamicGridComponent.dynamicGridBean.m30ChannelIds}">
+	<input type="hidden" id="m60Channels" value="${dynamicGridComponent.dynamicGridBean.m60ChannelIds}">
+	
+	<input type="hidden" id="s25Channels" value="${dynamicGridComponent.dynamicGridBean.s25ChannelIds}">
+	<input type="hidden" id="s30Channels" value="${dynamicGridComponent.dynamicGridBean.s30ChannelIds}">
+	<input type="hidden" id="s60Channels" value="${dynamicGridComponent.dynamicGridBean.s60ChannelIds}">
+	
+	<input type="hidden" id="y25Channels" value="${dynamicGridComponent.dynamicGridBean.y25ChannelIds}">
+	<input type="hidden" id="y30Channels" value="${dynamicGridComponent.dynamicGridBean.y30ChannelIds}">
+	<input type="hidden" id="y60Channels" value="${dynamicGridComponent.dynamicGridBean.y60ChannelIds}">
+	
+	<input type="hidden" id="allChannels" value="${dynamicGridComponent.dynamicGridBean.allChannels}">
+	
+	<input type="hidden" id="m25ChannelTitle" value="${dynamicGridComponent.dynamicGridBean.m25ChannelTitle}">
+	<input type="hidden" id="s25ChannelTitle" value="${dynamicGridComponent.dynamicGridBean.s25ChannelTitle}">
+	<input type="hidden" id="y25ChannelTitle" value="${dynamicGridComponent.dynamicGridBean.y25ChannelTitle}">
+	
+	<input type="hidden" id="m25ChannelSubTitle" value="${dynamicGridComponent.dynamicGridBean.m25ChannelSubTitle}">
+	<input type="hidden" id="s25ChannelSubTitle" value="${dynamicGridComponent.dynamicGridBean.s25ChannelSubTitle}">
+	<input type="hidden" id="y25ChannelSubTitle" value="${dynamicGridComponent.dynamicGridBean.y25ChannelSubTitle}">
+	
+	<input type="hidden" id="m25ChannelPrice" value="${dynamicGridComponent.dynamicGridBean.m25ChannelMoney}">
+	<input type="hidden" id="s25ChannelPrice" value="${dynamicGridComponent.dynamicGridBean.s25ChannelMoney}">
+	<input type="hidden" id="y25ChannelPrice" value="${dynamicGridComponent.dynamicGridBean.y25ChannelMoney}">
+	
+	
+	<input type="hidden" id="m30ChannelTitle" value="${dynamicGridComponent.dynamicGridBean.m30ChannelTitle}">
+	<input type="hidden" id="s30ChannelTitle" value="${dynamicGridComponent.dynamicGridBean.s30ChannelTitle}">
+	<input type="hidden" id="y30ChannelTitle" value="${dynamicGridComponent.dynamicGridBean.y30ChannelTitle}">
+	
+	<input type="hidden" id="m30ChannelSubTitle" value="${dynamicGridComponent.dynamicGridBean.m30ChannelSubTitle}">
+	<input type="hidden" id="s30ChannelSubTitle" value="${dynamicGridComponent.dynamicGridBean.s30ChannelSubTitle}">
+	<input type="hidden" id="y30ChannelSubTitle" value="${dynamicGridComponent.dynamicGridBean.y30ChannelSubTitle}">
+	
+	<input type="hidden" id="m30ChannelPrice" value="${dynamicGridComponent.dynamicGridBean.m30ChannelMoney}">
+	<input type="hidden" id="s30ChannelPrice" value="${dynamicGridComponent.dynamicGridBean.s30ChannelMoney}">
+	<input type="hidden" id="y30ChannelPrice" value="${dynamicGridComponent.dynamicGridBean.y30ChannelMoney}">
+	
+
+	<input type="hidden" id="m60ChannelTitle" value="${dynamicGridComponent.dynamicGridBean.m60ChannelTitle}">
+	<input type="hidden" id="s60ChannelTitle" value="${dynamicGridComponent.dynamicGridBean.s60ChannelTitle}">
+	<input type="hidden" id="y60ChannelTitle" value="${dynamicGridComponent.dynamicGridBean.y60ChannelTitle}">
+	
+	<input type="hidden" id="m60ChannelSubTitle" value="${dynamicGridComponent.dynamicGridBean.m60ChannelSubTitle}">
+	<input type="hidden" id="s60ChannelSubTitle" value="${dynamicGridComponent.dynamicGridBean.s60ChannelSubTitle}">
+	<input type="hidden" id="y60ChannelSubTitle" value="${dynamicGridComponent.dynamicGridBean.y60ChannelSubTitle}">
+	
+	<input type="hidden" id="m60ChannelPrice" value="${dynamicGridComponent.dynamicGridBean.m60ChannelMoney}">
+	<input type="hidden" id="s60ChannelPrice" value="${dynamicGridComponent.dynamicGridBean.s60ChannelMoney}">
+	<input type="hidden" id="y60ChannelPrice" value="${dynamicGridComponent.dynamicGridBean.y60ChannelMoney}">
+	
+
+<div class = "dyn-grid">
+	<div class="fadein slower">
+		<div class="mss-packages dark-gradient">
+			<div class="container-fluid">
+				<div class="row mss-packages-header">
+					<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+						<div class="row ng-scope">
+							<sly data-sly-test="${dynamicGridComponent.dynamicGridBean.rowOneCol == 2}">
+								<a class="mss-packages-tab packages-tab-header float-left active-tab" id="monthAnchor">
+	                              	<h6 class="text-uppercase h-tag-spacing ng-binding">${properties.monthlyTitle}</h6>
+	                                <p class="fine-print ng-binding">${properties.monthlySubTitle}</p>
+	                            </a>
+	                            <a class="mss-packages-tab packages-tab-header float-left" id="sixMonthAnchor">
+	                              	<h6 class="text-uppercase h-tag-spacing ng-binding">${properties.sixMonthlyTitle}</h6>
+	                                <p class="fine-print ng-binding">${properties.sixMonthlySubTitle}</p>
+	                            </a>
+							</sly>
+							<sly data-sly-test="${dynamicGridComponent.dynamicGridBean.rowOneCol == 3}">
+								<a class="mss-packages-tab packages-tab-header-thirtythree float-left active-tab" id="monthAnchor">
+		                           	<h6 class="text-uppercase h-tag-spacing ng-binding">${properties.monthlyTitle}</h6>
+		                            <p class="fine-print ng-binding">${properties.monthlySubTitle}</p>
+		                        </a>
+		                        <a class="mss-packages-tab packages-tab-header-thirtythree float-left" id="sixMonthAnchor">
+		                           	<h6 class="text-uppercase h-tag-spacing ng-binding">${properties.sixMonthlyTitle}</h6>
+		                            <p class="fine-print ng-binding">${properties.sixMonthlySubTitle}</p>
+		                        </a>
+		                        <a class="mss-packages-tab packages-tab-header-thirtythree float-left" id="yearAnchor">
+		                           	<h6 class="text-uppercase h-tag-spacing ng-binding">${properties.yearlyTitle}</h6>
+		                            <p class="fine-print ng-binding">${properties.yearlySubTitle}</p>
+		                        </a>
+							</sly>
+						</div>
+						<div class="row">
+								<div data-sly-test="${dynamicGridComponent.dynamicGridBean.rowTwoCol == 1}" id="oneCol">
+									<div class="mss-packages-tab float-left ng-scope active-tab" id="rowTwoTab1" style="width: 100%;">
+	                                	<h1 class="text-uppercase h-tag-spacing ng-binding">${properties.m25ChannelTitle}</h1>
+	                                    <h6 class="text-uppercase h-tag-spacing channel-bottom-margin ng-binding">${properties.m25ChannelSubTitle}</h6>
+	                                    <p class="fine-print extra-bold p-tag-spacing hidden-xs ng-binding"></p>
+	                                    <p class="fine-print extra-bold p-tag-spacing visible-xs ng-binding"></p>
+	                                    <hr class="mss-packages-hr">
+	                                    <p class="fine-print extra-bold text-uppercase p-tag-spacing ng-binding" id="25Price">${properties.m25ChannelMoney}</p>
+	                                </div>
+	                            </div>
+	                            <div data-sly-test="${dynamicGridComponent.dynamicGridBean.rowTwoCol == 2}" id="twoCol">
+	                            	<div class="mss-packages-tab float-left ng-scope active-tab" id="rowTwoTab1" style="width: 50%;">
+	                                	<h1 class="text-uppercase h-tag-spacing ng-binding">${properties.m25ChannelTitle}</h1>
+	                                    <h6 class="text-uppercase h-tag-spacing channel-bottom-margin ng-binding">${properties.m25ChannelSubTitle}</h6>
+	                                    <p class="fine-print extra-bold p-tag-spacing hidden-xs ng-binding"></p>
+	                                    <p class="fine-print extra-bold p-tag-spacing visible-xs ng-binding"></p>
+	                                    <hr class="mss-packages-hr">
+	                                    <p class="fine-print extra-bold text-uppercase p-tag-spacing ng-binding" id="25Price">${properties.m25ChannelMoney}</p>
+	                                </div>
+	                                <div class="mss-packages-tab float-left ng-scope" id="rowTwoTab2" style="width: 50%;">
+	                                    <h1 class="text-uppercase h-tag-spacing ng-binding">${properties.m30ChannelTitle}</h1>
+	                                    <h6 class="text-uppercase h-tag-spacing channel-bottom-margin ng-binding">${properties.m30ChannelSubTitle}</h6>
+	                                    <p class="fine-print extra-bold p-tag-spacing hidden-xs ng-binding"></p>
+	                                    <p class="fine-print extra-bold p-tag-spacing visible-xs ng-binding"></p>
+	                                    <hr class="mss-packages-hr">
+	                                    <p class="fine-print extra-bold text-uppercase p-tag-spacing ng-binding" id="30Price">${properties.m30ChannelMoney}</p>
+	                                </div>
+	                            </div>
+	                            <div data-sly-test="${dynamicGridComponent.dynamicGridBean.rowTwoCol == 3}" id="threeCol">
+	                            	<div class="mss-packages-tab float-left ng-scope active-tab" id="rowTwoTab1" style="width: 33.33%;">
+	                                	<h1 class="text-uppercase h-tag-spacing ng-binding">${properties.m25ChannelTitle}</h1>
+	                                    <h6 class="text-uppercase h-tag-spacing channel-bottom-margin ng-binding">${properties.m25ChannelSubTitle}</h6>
+	                                    <p class="fine-print extra-bold p-tag-spacing hidden-xs ng-binding"></p>
+	                                    <p class="fine-print extra-bold p-tag-spacing visible-xs ng-binding"></p>
+	                                    <hr class="mss-packages-hr">
+	                                    <p class="fine-print extra-bold text-uppercase p-tag-spacing ng-binding" id="25Price">${properties.m25ChannelMoney}</p>
+	                                </div>
+	                                <div class="mss-packages-tab float-left ng-scope" id="rowTwoTab2" style="width: 33.33%;">
+	                                    <h1 class="text-uppercase h-tag-spacing ng-binding">${properties.m30ChannelTitle}</h1>
+	                                    <h6 class="text-uppercase h-tag-spacing channel-bottom-margin ng-binding">${properties.m30ChannelSubTitle}</h6>
+	                                    <p class="fine-print extra-bold p-tag-spacing hidden-xs ng-binding"></p>
+	                                    <p class="fine-print extra-bold p-tag-spacing visible-xs ng-binding"></p>
+	                                    <hr class="mss-packages-hr">
+	                                    <p class="fine-print extra-bold text-uppercase p-tag-spacing ng-binding" id="30Price">${properties.m30ChannelMoney}</p>
+	                                </div>
+	                                <div class="mss-packages-tab float-left ng-scope" id="rowTwoTab3" style="width: 33.33%;">
+	                                    <h1 class="text-uppercase h-tag-spacing ng-binding">${properties.m60ChannelTitle}</h1>
+	                                    <h6 class="text-uppercase h-tag-spacing channel-bottom-margin ng-binding">${properties.m60ChannelSubTitle}</h6>
+	                                    <p class="fine-print extra-bold p-tag-spacing hidden-xs ng-binding"></p>
+	                                    <p class="fine-print extra-bold p-tag-spacing visible-xs ng-binding"></p>
+	                                    <hr class="mss-packages-hr">
+	                                    <p class="fine-print extra-bold text-uppercase p-tag-spacing ng-binding" id="60Price">${properties.m60ChannelMoney}</p>
+	                             	</div>
+	                         	</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+</div>
+<div data-sly-resource ="${'allchannels' @ resourceType='sling-tv/components/content/general/allchannels'}"></div>
+
+<div class= "col-md-12">
+<div class=" row light-gradient">
+    		<div id ="cta1" style="padding:20px 0">
+            <div data-sly-resource ="${'cta-component1' @ resourceType='sling-tv/components/content/general/cta-component'}"></div>
+            </div>
+            <div id ="cta2" style="padding:20px 0">
+            <div data-sly-resource ="${'cta-component2' @ resourceType='sling-tv/components/content/general/cta-component'}"></div>
+            </div>
+            <div id ="cta3" style="padding:20px 0">
+            <div data-sly-resource ="${'cta-component3' @ resourceType='sling-tv/components/content/general/cta-component'}"></div>
+            </div>
+
+    <div class= "col-md-12" id="extras">
+    </div> 
+</div>
+</div> 

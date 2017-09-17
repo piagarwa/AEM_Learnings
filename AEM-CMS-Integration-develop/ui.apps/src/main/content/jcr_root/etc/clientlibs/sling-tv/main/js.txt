@@ -1,0 +1,13 @@
+#base=js
+jquery-3.2.0.min.js
+bootstrap.min.js
+slick.min.js
+inviewport.js
+jquery.matchHeight.js
+app.js
+jquery.cookie.js
+slingscript.js
+slingtvutils.js
+gamefinder.js
+ota.js
+countdown-clock.js

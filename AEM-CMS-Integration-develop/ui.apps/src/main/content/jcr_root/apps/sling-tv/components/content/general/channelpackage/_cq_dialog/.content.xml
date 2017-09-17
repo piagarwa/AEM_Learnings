@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
+            type="nav"/>
+        <items jcr:primaryType="nt:unstructured">
+            <package-1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Package-1"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <fieldset
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Title of the package"
+                                                fieldLabel="Title"
+                                                name="./monthlyTitle"/>
+                                            <subtitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Subtitle of the package"
+                                                fieldLabel="Subtitle"
+                                                name="./monthlySubTitle"/>
+                                            <channeltitle1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Channel Title"
+                                                fieldLabel="Channel Title-1"
+                                                name="./m25ChannelTitle"/>
+                                            <channelsubtitle1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the &#xa;Channel Subtitle"
+                                                fieldLabel="Channel Subtitle-1"
+                                                name="./m25ChannelSubtitle"/>
+                                            <channelprice1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Channel package price"
+                                                fieldLabel="Channel Price-1"
+                                                name="./m25ChannelMoney"/>
+                                            <channels1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                class="full-width"
+                                                fieldDescription="Click '+' to add a new channel"
+                                                fieldLabel="Channels-1">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                    eaem-nested=""
+                                                    name="./m25channels">
+                                                    <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                        method="absolute"/>
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <channelname
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                    fieldDescription="Enter Channel Name"
+                                                                    fieldLabel="Channel Name"
+                                                                    name="./channelName"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </channels1>
+                                            <channeltitle2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Please enter Channel Title"
+                                                fieldLabel="Channel Title-2"
+                                                name="./m30ChannelTitle"/>
+                                            <channelsubtitle2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Please Enter the Channel Subtitle"
+                                                fieldLabel="Channel Subtitle-2"
+                                                name="./m30ChannelSubtitle"/>
+                                            <channelprice2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Channel Package price"
+                                                fieldLabel="Channel Price-3"
+                                                name="./m30ChannelMoney"/>
+                                            <channels2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                class="full-width"
+                                                fieldDescription="Click '+' to add a new channel"
+                                                fieldLabel="Channels-2">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                    eaem-nested=""
+                                                    name="./m30channels">
+                                                    <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                        method="absolute"/>
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <channelname
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                    fieldDescription="Enter Channel Name"
+                                                                    fieldLabel="Channel Name"
+                                                                    name="./channelName"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </channels2>
+                                            <channeltitle3
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Please Enter the Channel Title"
+                                                fieldLabel="Channel Title-3"
+                                                name="./m60ChannelTitle"/>
+                                            <channelsubtitle3
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Please Enter Channel Subtitle"
+                                                fieldLabel="Channel Subtitle-3"
+                                                name="./m60ChannelSubtitle"/>
+                                            <channelprice3
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Channel price"
+                                                fieldLabel="Channel Price-3"
+                                                name="./m60ChannelMoney"/>
+                                            <channels3
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                                class="full-width"
+                                                fieldDescription="Click '+' to add a new channel"
+                                                fieldLabel="Channels-3">
+                                                <field
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                                    eaem-nested=""
+                                                    name="./m60channels">
+                                                    <layout
+                                                        jcr:primaryType="nt:unstructured"
+                                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                                        method="absolute"/>
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <column
+                                                            jcr:primaryType="nt:unstructured"
+                                                            sling:resourceType="granite/ui/components/foundation/container">
+                                                            <items jcr:primaryType="nt:unstructured">
+                                                                <channelname
+                                                                    jcr:primaryType="nt:unstructured"
+                                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                                    fieldDescription="Enter Channel Name"
+                                                                    fieldLabel="Channel Name"
+                                                                    name="./channelName"/>
+                                                            </items>
+                                                        </column>
+                                                    </items>
+                                                </field>
+                                            </channels3>
+                                        </items>
+                                    </column>
+                                </items>
+                            </fieldset>
+                        </items>
+                    </column>
+                </items>
+            </package-1>
+            <package-2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Package-2"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <fieldset
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/fieldset">
+                                <layout
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Title of the package"
+                                                fieldLabel="Title"
+                                                name="./yearlyTitle"/>
+                                            <subtitle
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Subtitle of the package"
+                                                fieldLabel="Subtitle"
+                                                name="./yearlySubTitle"/>
+                                            <channeltitle1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Channel Title"
+                                                fieldLabel="Channel Title-1"
+                                                name="./25ChannelTitle"/>
+                                            <channelsubtitle1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the &#xa;Channel Subtitle"
+                                                fieldLabel="Channel Subtitle-1"
+                                                name="./25ChannelSubtitle"/>
+                                            <channelprice1
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Channel package price"
+                                                fieldLabel="Channel Price-1"
+                                                name="./25ChannelMoney"/>
+                                            <channeltitle2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Please enter Channel Title"
+                                                fieldLabel="Channel Title-2"
+                                                name="./30ChannelTitle"/>
+                                            <channelsubtitle2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Please Enter the Channel Subtitle"
+                                                fieldLabel="Channel Subtitle-2"
+                                                name="./30ChannelSubtitle"/>
+                                            <channelprice2
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Channel Package price"
+                                                fieldLabel="Channel Price-3"
+                                                name="./30ChannelMoney"/>
+                                            <channeltitle3
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Please Enter the Channel Title"
+                                                fieldLabel="Channel Title-3"
+                                                name="./60ChannelTitle"/>
+                                            <channelsubtitle3
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Please Enter Channel Subtitle"
+                                                fieldLabel="Channel Subtitle-3"
+                                                name="./60ChannelSubtitle"/>
+                                            <channelprice3
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                fieldDescription="Enter the Channel price"
+                                                fieldLabel="Channel Price-3"
+                                                name="./60ChannelMoney"/>
+                                        </items>
+                                    </column>
+                                </items>
+                            </fieldset>
+                        </items>
+                    </column>
+                </items>
+            </package-2>
+        </items>
+    </content>
+</jcr:root>

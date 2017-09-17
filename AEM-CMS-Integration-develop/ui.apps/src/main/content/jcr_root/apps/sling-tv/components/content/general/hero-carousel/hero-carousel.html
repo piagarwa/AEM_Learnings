@@ -1,0 +1,58 @@
+<sly data-sly-test="${wcmmode.edit && !properties.videoURL && !properties.imageURL}">click here to configure A La Carte hero</sly>
+<div class="${properties.videoURL && 'video_marquee'} ${properties.imageURL && 'hero-banner'}">
+	<sly data-sly-test = "${properties.videoURL}" >
+		<sly data-sly-test="${properties.autoPlayVideo}">
+			<video loop autoplay muted playsinline poster="${properties.fallBackImagePath}" src="${properties.videoURL}">
+			</sly>
+			<sly data-sly-test="${!properties.autoPlayVideo}">
+				<video loop autoplay muted playsinline poster="${properties.fallBackImagePath}" src="${properties.videoURL}">
+				</sly>
+				<source src="${properties.videoURL}" type="video/mp4"/>
+			</video>
+		</sly>
+		
+		<sly data-sly-test = "${properties.imageURL}" >
+			<img src="${properties.imageURL}" alt="${properties.heroImageAltText}" />
+		</sly>
+</div>
+	
+<div class="offer-detail">
+	<div class="container-fluid minimal-cms-content-container max-width">
+		<sly data-sly-test="${properties.includeTextComponent}">
+			<div class="${!properties.includeCtaComponent && !properties.packageText && 'col-md-12'} ${properties.includeCtaComponent && properties.packageText && 'col-md-4'} ${properties.includeCtaComponent && !properties.packageText && 'col-md-6'} ${!properties.includeCtaComponent && properties.packageText && 'col-md-4'} ${!properties.packageText && 'col-sm-12 col-xs-12'}
+				${properties.packageText && 'col-sm-8 col-xs-6'}	marquee-headline-box">
+					
+				<div data-sly-resource="${ @path='heroText', resourceType='sling-tv/components/content/general/rich-text'}" data-sly-unwrap></div>
+			</div>
+		</sly>
+		<sly data-sly-test="${properties.packageText}">	
+			<div class="${!properties.includeTextComponent && !properties.includeCtaComponent && 'col-md-12'} ${properties.includeTextComponent && properties.includeCtaComponent && 'col-md-4'} ${properties.includeTextComponent && !properties.includeCtaComponent && 'col-md-6'} ${!properties.includeTextComponent && properties.includeCtaComponent && 'col-md-6'} ${!properties.includeTextComponent && 'col-sm-12 col-xs-12'} ${properties.includeTextComponent && 'col-sm-4 col-xs-6'} services">
+					<!-- ngIf: vm.content.slingModalContent && vm.activePackage.display_price -->
+				<div>
+					<div class="row">
+						<p class="price-headline gray">${properties.packageText}</p>
+					</div>
+					<sly data-sly-test="${properties.currency || properties.offerDuration}">
+						<h1 class="services-price" value="${properties.offerDuration @ i18n}" currency="${properties.currency}">${properties.priceDisplay}</h1>
+					</sly>
+					<sly data-sly-test="${! properties.currency && !properties.offerDuration}">
+						<h1 class="services-price" value="${'/mo' @ i18n}" currency="$">${properties.priceDisplay}</h1>
+					</sly>
+				</div>
+			</div>
+		</sly>
+		<sly data-sly-test="${properties.includeCtaComponent}">
+			<div class="${!properties.includeTextComponent && !properties.packageText && 'col-md-12'} ${properties.includeTextComponent && properties.packageText && 'col-md-4'} ${properties.includeTextComponent && !properties.packageText && 'col-md-6'} ${!properties.includeTextComponent && properties.packageText && 'col-md-6'} col-sm-12 col-xs-12 cta-box">
+					
+					
+				<div data-sly-resource="${ @path='heroCTA', resourceType='sling-tv/components/content/general/cta-component'}" data-sly-unwrap></div>
+			</div>
+				
+		</sly>
+	</div>
+</div>
+</div>
+	
+	
+	
+	

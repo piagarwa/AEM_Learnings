@@ -1,0 +1,48 @@
+<div data-sly-test.clockConfigured="${wcmmode.edit && !properties.countdownStartDate}">
+  Click here to configure Countdown Clock
+</div>
+
+<sly data-sly-test="${!clockConfigured}">
+  <sly data-sly-use.clockComponent="com.sling.tv.core.models.CountdownClockModel">
+
+    <div class="countdown-container countdown-datetime-only"
+         data-sling-countdown-start="${clockComponent.countdownStartFormatedDate}"
+         data-sling-countdown-temp-length="${properties.timeDuration}"
+         data-sling-countdown-days-switch="${properties.daysCountLimit}"
+         data-sling-countdown-days="${properties.countdownDays ? 'false' : 'true'}"
+         data-sling-countdown-time="${properties.countdownTime ? 'false' : 'true'}"
+    >
+      <div class="countdown-clock-counter">
+        <div class="countdown-days">
+          <div class="countdown-counter">0</div>
+          <div class="countdown-units">${properties.countdownDayText}</div>
+        </div>
+        <div class="countdown-separator countdown-days-separator">:</div>
+
+        <div class="countdown-hours">
+          <div class="countdown-counter">00</div>
+          <div class="countdown-units">${properties.countdownHourText}</div>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-minutes">
+          <div class="countdown-counter">00</div>
+          <div class="countdown-units">${properties.countdownMinutesText}</div>
+        </div>
+        <div class="countdown-separator">:</div>
+        <div class="countdown-seconds">
+          <div class="countdown-counter">00</div>
+          <div class="countdown-units">${properties.countdownSecondsText}</div>
+        </div>
+      </div>
+      <div class="countdown-start">
+        <span class="countdown-start-date">${properties.dayMonthText}</span>
+        <span class="countdown-start-at">@</span><br class="countdown-start-br"/>
+        <span class="countdown-start-time">${properties.timeZoneText}</span>
+      </div>
+      <div class="countdown-end">
+        ${properties.countdownEndText}
+      </div>
+    </div>
+
+  </sly>
+</sly>

@@ -1,0 +1,57 @@
+<div id= "${properties.id}">
+<div data-sly-test="${wcmmode.edit && !properties.buttonText}">Click here to configure CTA</div>
+
+<div data-sly-test="${properties.buttonText}" data-sly-use.ctaComponent="com.sling.tv.core.models.CTAComponent">
+  <div class="${!properties.stickyMobile && 'cta-container'} ${properties.alignment} ${properties.stickyMobile && 'cta-box'} ${properties.hideCta && 'hidden-xs'} ">
+    
+    <a x-cq-linkchecker="skip" class="btn btn-primary bold ${properties.ctaBorder} ${properties.ctaOptions}" role="button" data-sly-use.ctaLinkChecker="${'/apps/sling-tv/components/utils/linkchecker.js' @ link=ctaComponent.ctaURL}" href="${ctaLinkChecker.formattedLink}" target="${properties.ctaWindowSelection}"> <span class="extra-bold">${properties.buttonText}</span><span class="${properties.caretOptions}"></span> </a>
+	
+	
+	<sly data-sly-test="${properties.offerDetailsLabel}">
+    <div class="sublink">  
+        <a x-cq-linkchecker="skip" class="sublink-button js-sublink" date-attr="${properties.offerDetailsDateAttr}"><span>${properties.offerDetailsLabel}</span></a>
+    </div> 
+	
+	<div class="container js-offer-details-container hide">
+        <div class="offer-details-modal">
+            <div class="offer-details-modal-container">
+                <div class="offer-details-modal-header">
+                    <h4 class="exit js-exit">×</h4>
+                    <h5>${properties.offerDetailsHeading}</h5>
+                    <p>${properties.offerPublishedDate}</p>
+                </div>
+                <div class="offer-details-modal-body">
+					${ctaComponent.offerDescription @ context ='html'}
+                </div>
+            </div>
+        </div>
+    </div>
+	</sly>
+  
+                                        
+  </div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+$(".js-sublink").on('click',function(){
+    var offerDateAttr = $(this).attr("date-attr");
+    var d = new Date();
+	var offerAttr;
+	if(offerDateAttr)
+	{
+		try {
+			offerAttr = parseInt(offerDateAttr);
+		} catch (e) {
+			//ignore
+		}
+	}
+    
+	isNaN(offerAttr)?d.setDate(d.getDate() + 7):d.setDate(d.getDate() + offerAttr);
+     var month = d.getMonth()+1;
+	 $(".date").html(month+"/"+d.getDate()+"/"+d.getFullYear());
+
+})
+
+</script>

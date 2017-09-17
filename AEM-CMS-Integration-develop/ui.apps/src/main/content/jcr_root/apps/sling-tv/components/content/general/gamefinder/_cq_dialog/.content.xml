@@ -1,0 +1,575 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/foundation/container">
+        <layout
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="granite/ui/components/foundation/layouts/tabs"/>
+        <items jcr:primaryType="nt:unstructured">
+            <tab1
+                jcr:primaryType="nt:unstructured"
+                jcr:title="General"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <datename
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text to be Displayed for Date Column Header*"
+                                name="./dateName"
+                                required="{Boolean}true"/>
+                            <timename
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text to be Displayed for Time Column Header*"
+                                name="./timeName"
+                                required="{Boolean}true"/>
+                            <channelname
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text to be Displayed for Channel Column Header*"
+                                name="./chName"
+                                required="{Boolean}true"/>
+                            <matchupname
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text to be Displayed for MatchUp Column Header*"
+                                name="./matchName"
+                                required="{Boolean}true"/>
+                            <searchtext
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Placeholder for Search*"
+                                name="./searchText"
+                                required="{Boolean}true"/>
+                            <ziptext
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Placeholder for ZipCode*"
+                                name="./zipText"
+                                required="{Boolean}true"/>
+                            <previous
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Label for Previous Pagination"
+                                value="Previous"
+                                name="./prev"
+                                required="{Boolean}true"/>
+                            <next
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Label for Next Pagination"
+                                value="Next"
+                                name="./next"
+                                required="{Boolean}true"/>
+                            <maxrows
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Max Rows per Page"
+                                name="./maxRows"/>
+                            <showpageresults
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                name="./showPagination"
+                                text="Show Pagination"
+                                value="true"/>
+                            <showseeall
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                name="./showSeeAll"
+                                text="Show See All"
+                                value="true"/>
+                            <seeallname
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text to be displayed for see All CTA"
+                                name="./ctaName"/>
+                            <seealllink
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                fieldDescription="Please provide the link to be associated with see all button"
+                                fieldLabel="Link for See All"
+                                name="./seeAllLink"/>
+                            <showdescription
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                name="./showDesc"
+                                text="Collapse Description of Matches On Load"
+                                value="true"/>
+                            <showsticky
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                name="./showSticky"
+                                text="Show Sticky Header"
+                                value="true"/>
+                        </items>
+                    </column>
+                </items>
+            </tab1>
+            <tab2
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Sports"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <matchInfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                class="foundation-layout-util-maximized-alt"
+                                fieldLabel="Add/delete Sports">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./addSports">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <newsports
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/coral/foundation/heading"
+                                                    fieldLabel="New Sports"
+                                                    text="New Sport"/>
+                                                <sportname
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Sport Name"
+                                                    name="./sportName"/>
+                                                <sportkey
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldDescription="This field should match with the affiliation name in Excel sheet"
+                                                    fieldLabel="Key Name for Sports"
+                                                    name="./keyName"/>
+                                                <checked
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    checked="true"
+                                                    name="./checked"
+                                                    text="Sport checked on load of page?"
+                                                    value="true"/>
+                                                <showhide
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/checkbox"
+                                                    checked="true"
+                                                    name="./showHide"
+                                                    text="Show Sport on Page?"
+                                                    value="true"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </matchInfo>
+                        </items>
+                    </columns>
+                </items>
+            </tab2>
+            <tab3
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Match Details"
+                sling:hideResource="true"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <columns
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <matchInfo
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/multifield"
+                                class="foundation-layout-util-maximized-alt"
+                                fieldLabel="Match information">
+                                <field
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="granite/ui/components/foundation/form/fieldset"
+                                    acs-commons-nested=""
+                                    name="./matchInfo">
+                                    <layout
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"
+                                        method="absolute"/>
+                                    <items jcr:primaryType="nt:unstructured">
+                                        <column
+                                            jcr:primaryType="nt:unstructured"
+                                            sling:resourceType="granite/ui/components/foundation/container">
+                                            <items jcr:primaryType="nt:unstructured">
+                                                <gamedate
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/datepicker"
+                                                    fieldLabel="Game Date &amp; Time"
+                                                    name="./gameDate"
+                                                    type="datetime"/>
+                                                <affiliation
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/select"
+                                                    class="cq-dialog-dropdown-showhide"
+                                                    cq-dialog-dropdown-showhide-target=".image-video-hide-show"
+                                                    fieldLabel="Affiliation Type"
+                                                    name="./affiliation">
+                                                    <items jcr:primaryType="nt:unstructured">
+                                                        <category1
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="NFL"
+                                                            value="NFL"/>
+                                                        <category2
+                                                            jcr:primaryType="nt:unstructured"
+                                                            text="NCAA-NCF"
+                                                            value="NCAA-NCF"/>
+                                                    </items>
+                                                </affiliation>
+                                                <channellink
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/pathbrowser"
+                                                    fieldLabel="Link to the Channel"
+                                                    name="./channelLink"/>
+                                                <channel
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Channel"
+                                                    name="./channel"/>
+                                                <matchup
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Match Name for Desktop"
+                                                    name="./matchUp"/>
+                                                <mobile-matchup
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Match Name for Mobile"
+                                                    name="./matchUpMobile"/>
+                                                <matchdesczip
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Drawer Display with  Zip"
+                                                    name="./matchDesc"/>
+                                                <matchdescnozip
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Drawer Display with No Zip"
+                                                    name="./matchDescNoZip"/>
+                                                <search
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                                    fieldLabel="Search Keywords"
+                                                    name="./searchKeywords"/>
+                                                <zipcode
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceType="granite/ui/components/foundation/form/textarea"
+                                                    fieldLabel="Zip List"
+                                                    name="./zipList"/>
+                                            </items>
+                                        </column>
+                                    </items>
+                                </field>
+                            </matchInfo>
+                        </items>
+                    </columns>
+                </items>
+            </tab3>
+            <tab4
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Error Messages"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <searcherror
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Error Message for Search"
+                                name="./searchError"/>
+                            <ziperror
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Error Message for Wrong Zip"
+                                name="./zipError"/>
+                            <uncheckederror
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Error Message if no Sports Selected"
+                                name="./noGameError"/>
+                            <servererror
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Error Message If server Error"
+                                name="./serverError"/>
+                        </items>
+                    </column>
+                </items>
+            </tab4>
+            <tab5
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Desktop Names for Days/Months"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <thisweek
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="For Line Breaks use &quot;&lt;br/>&quot;  after the word"
+                                fieldLabel="Text for 'View this Week'"
+                                name="./deskWeek"/>
+                            <today
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for Today"
+                                name="./deskTod"/>
+                            <sunday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for Sunday"
+                                name="./deskSun"/>
+                            <monday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for monday"
+                                name="./deskMon"/>
+                            <tuesday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for Tuesday"
+                                name="./deskTue"/>
+                            <wednesday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for Wednesday"
+                                name="./deskWed"/>
+                            <thursday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for Thursday"
+                                name="./deskThu"/>
+                            <friday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for Friday"
+                                name="./deskFri"/>
+                            <saturday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for Saturday"
+                                name="./deskSat"/>
+                            <january
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for January"
+                                name="./deskJan"/>
+                            <february
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for February"
+                                name="./deskFeb"/>
+                            <march
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for March"
+                                name="./deskMar"/>
+                            <april
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for April"
+                                name="./deskApr"/>
+                            <may
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for May"
+                                name="./deskMay"/>
+                            <june
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for June"
+                                name="./deskJun"/>
+                            <july
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for July"
+                                name="./deskJul"/>
+                            <august
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for August"
+                                name="./deskAug"/>
+                            <september
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for September"
+                                name="./deskSep"/>
+                            <october
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for October"
+                                name="./deskOct"/>
+                            <november
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for November"
+                                name="./deskNov"/>
+                            <december
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Text for December"
+                                name="./deskDec"/>
+                        </items>
+                    </column>
+                </items>
+            </tab5>
+            <tab6
+                jcr:primaryType="nt:unstructured"
+                jcr:title="Mobile Names for Days/Months"
+                sling:resourceType="granite/ui/components/foundation/section">
+                <layout
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                <items jcr:primaryType="nt:unstructured">
+                    <column
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="granite/ui/components/foundation/container">
+                        <items jcr:primaryType="nt:unstructured">
+                            <mobthisweek
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldDescription="For Line Breaks use &quot;&lt;br/>&quot;  after the word"
+                                fieldLabel="Mobile Text for 'View this Week'"
+                                name="./mobWeek"/>
+                            <mobtoday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for Today"
+                                name="./mobTod"/>
+                            <mobsunday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for Sunday"
+                                name="./mobSun"/>
+                            <mobmonday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for monday"
+                                name="./mobMon"/>
+                            <mobtuesday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for Tuesday"
+                                name="./mobTue"/>
+                            <mobwednesday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for Wednesday"
+                                name="./mobWed"/>
+                            <mobthursday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for Thursday"
+                                name="./mobThu"/>
+                            <mobfriday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for Friday"
+                                name="./mobFri"/>
+                            <mobsaturday
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for Saturday"
+                                name="./mobSat"/>
+                            <mobjanuary
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for January"
+                                name="./mobJan"/>
+                            <mobfebruary
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for February"
+                                name="./mobFeb"/>
+                            <mobmarch
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for March"
+                                name="./mobMar"/>
+                            <mobapril
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for April"
+                                name="./mobApr"/>
+                            <mobmay
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for May"
+                                name="./mobMay"/>
+                            <mobjune
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for June"
+                                name="./mobJun"/>
+                            <mobjuly
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for July"
+                                name="./mobJul"/>
+                            <mobaugust
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for August"
+                                name="./mobAug"/>
+                            <mobseptember
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for September"
+                                name="./mobSep"/>
+                            <moboctober
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for October"
+                                name="./mobOct"/>
+                            <mobnovember
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for November"
+                                name="./mobNov"/>
+                            <mobdecember
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="granite/ui/components/foundation/form/textfield"
+                                fieldLabel="Mobile Text for December"
+                                name="./mobDec"/>
+                        </items>
+                    </column>
+                </items>
+            </tab6>
+        </items>
+    </content>
+</jcr:root>

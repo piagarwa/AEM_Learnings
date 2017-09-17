@@ -1,0 +1,9 @@
+<div data-sly-use.analytics="com.sling.tv.core.models.AnalyticsModel"  data-sly-unwrap>
+ 	<script type="text/javascript">
+ 	var digitalData = digitalData || {};
+	 digitalData.page=${analytics.dataLayer @ context='unsafe'};
+    </script>
+</div>
+
+
+

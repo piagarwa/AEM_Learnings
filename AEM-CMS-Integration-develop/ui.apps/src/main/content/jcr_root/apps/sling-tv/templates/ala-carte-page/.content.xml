@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:description="Template for creating Sling TV home pages."
+    jcr:primaryType="cq:Template"
+    jcr:title="SlingTv A La Carte Page"
+    allowedPaths="[/content/sling-tv(/.+)?]"
+    ranking="{Long}100">
+    <jcr:content
+        jcr:primaryType="cq:PageContent"
+        sling:resourceType="sling-tv/components/page/ala-carte-page">
+		<par
+          jcr:primaryType="nt:unstructured"
+          sling:resourceType="wcm/foundation/components/parsys">
+		  <hero-carousel
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/hero-carousel"/>
+          <grid-component
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/grid-component"/>
+          <rich-text-1
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/rich-text"/>      
+          <ala-carte-carousal
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/core/columncontrol"/>      
+          <rich-text-2
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/rich-text"/>      
+          <extra-pods
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/extra-pods"/>
+          <rich-text-3
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/rich-text"/>
+          <image-text-column-control
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/core/columncontrol"/>      
+          <device-ribbons
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/device-ribbon"/>
+          <rich-text-4
+          	  jcr:primaryType="nt:unstructured"
+              sling:resourceType="sling-tv/components/content/general/rich-text"/>
+      	</par> 
+    </jcr:content>
+</jcr:root>

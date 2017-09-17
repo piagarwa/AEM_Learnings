@@ -1,0 +1,141 @@
+.countdown-container {
+  text-align: center;
+  width: 100%;
+}
+
+.countdown-clock-counter {
+  color: #FFFFFF;
+  font-weight: bold;
+  width: 100%;
+}
+
+.countdown-clock-counter > div {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.countdown-clock-counter > div > div {
+  padding: 0 5px;
+}
+
+.countdown-units {
+  color: #FFFFFF;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.countdown-start {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-weight: 500;
+  text-align: center;
+}
+
+.countdown-start-date {
+  white-space: nowrap;
+}
+
+.countdown-start-time {
+  white-space: nowrap;
+}
+
+.countdown-start-br {
+  display: none;
+}
+
+.countdown-datetime-only .countdown-clock-counter {
+  display: none;
+}
+
+.countdown-datetime-only .countdown-start {
+  font-weight: bold;
+  display: inline-block;
+}
+
+.countdown-datetime-only .countdown-start-at {
+  display: none;
+}
+
+.countdown-datetime-only .countdown-start-br {
+  display: block;
+}
+
+.countdown-end {
+  display: none;
+}
+
+.countdown-finished .countdown-start {
+  display: none;
+}
+
+.countdown-finished .countdown-clock-counter {
+  display: none;
+}
+
+.countdown-finished .countdown-end {
+  display: inline-block;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+@media (min-width: 768px) {
+  .countdown-clock-counter {
+    font-size: 54px;
+    line-height: 75px;
+  }
+  .countdown-clock-counter > div > div {
+    padding: 0 5px;
+  }
+  .countdown-units {
+    font-size: 16px;
+    line-height: 22px;
+    padding-top: 5px;
+  }
+  .countdown-start {
+    margin-top: 74px;
+    font-size: 22px;
+    line-height: 20px;
+  }
+  .countdown-datetime-only .countdown-start {
+    width: 400px;
+    font-size: 36px;
+    line-height: 30px;
+    margin-top: 0;
+  }
+  .countdown-finished .countdown-end {
+    width: 400px;
+    font-size: 36px;
+    line-height: 30px;
+    margin-top: 0;
+  }
+}
+@media (max-width: 767px) {
+  .countdown-clock-counter {
+    font-size: 32px;
+    line-height: 44px;
+  }
+  .countdown-clock-counter > div > div {
+    width: 50px;
+    padding: 0;
+  }
+  .countdown-units {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  .countdown-start {
+    margin-top: 17px;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .countdown-datetime-only .countdown-start {
+    font-size: 32px;
+    line-height: 30px;
+    margin-top: 0;
+  }
+  .countdown-finished .countdown-end {
+    font-size: 32px;
+    line-height: 30px;
+    margin-top: 0;
+  }
+}

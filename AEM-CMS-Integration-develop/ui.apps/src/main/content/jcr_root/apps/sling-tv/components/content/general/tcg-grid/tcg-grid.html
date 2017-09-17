@@ -1,0 +1,32 @@
+<div data-sly-test="${wcmmode.edit && !properties.tiles}" class="editor-info"> Please edit the Grid  component </div>
+
+
+<ul data-sly-list="${grid.tiles}" class="tgc-body" data-sly-use.grid="com.sling.tv.core.models.GridUse">
+
+    <li class="tgc-tile">
+        <img class="tgc-tile-image" src="${item.tabIcon}" />
+        <div class="tgc-tile-image tgc-tile-image-inverted">
+          <svg xmlns="http://www.w3.org/2000/svg"
+               xmlns:xlink="http://www.w3.org/1999/xlink"
+               width="100%" height="100%">
+
+            <filter id="invert">
+              <feColorMatrix type="matrix" values="-1 0  0 0  1
+                                                      0 -1 0 0 1
+                                                      0 0 -1 0 1
+                                                      0 0  0 1 0" />
+            </filter>
+            <image x="0" y="0" xlink:href="${item.tabIcon}" filter="url(#invert)" width="100%" height="100%"/>
+          </svg>
+        </div>
+        <div class="tgc-tile-breakout">
+          <div class="tgc-close"><span class="tgc-close-text">Close</span><div class="tgc-close-x"></div></div>
+          <h1>${item.tabTitle}</h1>
+          <sly data-sly-test.richTextName="${ '{0}{1}' @format=['richtext', itemList.index] }" />
+          <sly data-sly-test.ctaName="${ '{0}{1}' @format=['cta', itemList.index] }" />
+          <div data-sly-resource="${ @path=richTextName, resourceType='sling-tv/components/content/general/rich-text'}"></div>
+          <div data-sly-resource="${ @path=ctaName, resourceType='sling-tv/components/content/general/cta-component'}"></div>
+        </div>
+      </li>
+
+</ul>
